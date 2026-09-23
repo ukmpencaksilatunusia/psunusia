@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda | UKM Pencak Silat UNUSIA</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f8fafc; overflow-x: hidden; }
+        h1, h2, h3, h4, .font-heading { font-family: 'Outfit', sans-serif; }
+        
+        /* Animasi Latar Belakang Halus */
+        .bg-pattern {
+            background-image: radial-gradient(#10b981 1px, transparent 1px);
+            background-size: 24px 24px;
+            opacity: 0.05;
+        }
+
+        /* Glassmorphism Navbar */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+    <!-- Latar Belakang Dekoratif Global -->
+    <div class="fixed inset-0 bg-pattern pointer-events-none -z-10"></div>
+
+    <!-- HEADER & NAVIGASI -->
+    <nav class="glass-nav fixed w-full top-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xl shadow-md">🥋</div>
+                    <span class="font-heading font-bold text-xl tracking-tight text-gray-900">SILAT <span class="text-emerald-600">UNUSIA</span></span>
+                </div>
+                
+                <!-- Menu Navigasi (Desktop) -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-sm font-semibold text-gray-700 hover:text-emerald-600 transition">Beranda</a>
+                    <a href="#profil" class="text-sm font-semibold text-gray-700 hover:text-emerald-600 transition">Profil</a>
+                    <a href="#kegiatan" class="text-sm font-semibold text-gray-700 hover:text-emerald-600 transition">Kegiatan</a>
+                    <a href="#prestasi" class="text-sm font-semibold text-gray-700 hover:text-emerald-600 transition">Prestasi</a>
+                    <!-- Tombol Pendaftaran -->
+                    <a href="form.html" class="inline-flex items-center justify-center px-5 py-2.5 border border-transparent text-sm font-bold rounded-xl text-white bg-emerald-600 hover:bg-emerald-700 shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5">
+                        Daftar Sekarang
+                    </a>
+                </div>
+
+                <!-- Hamburger Menu (Mobile) -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-700 hover:text-emerald-600 focus:outline-none">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-[90vh] flex items-center">
+        <!-- Background Image overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1555597673-b21d5c935865?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Pencak Silat Latihan" class="w-full h-full object-cover filter brightness-[0.3]">
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="inline-block py-1 px-3 rounded-full bg-emerald-500/20 text-emerald-300 backdrop-blur-sm border border-emerald-500/30 text-sm font-semibold tracking-wider mb-6 uppercase">
+                Penerimaan Anggota Baru 2026
+            </span>
+            <h1 class="font-heading text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white tracking-tight mb-6 leading-tight">
+                Kuatkan Fisik, Pertajam Insting, <br>
+                <span class="text-emerald-400">Lestarikan Budaya Bangsa.</span>
+            </h1>
+            <p class="mt-4 max-w-2xl mx-auto text-lg sm:text-xl text-gray-300 mb-10">
+                Bergabunglah bersama keluarga besar UKM Pencak Silat UNUSIA. Jadilah ksatria yang tidak hanya tangguh di gelanggang, tetapi juga mulia dalam akhlak.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="form.html" class="px-8 py-4 border border-transparent text-base font-bold rounded-xl text-emerald-900 bg-emerald-400 hover:bg-emerald-300 shadow-lg hover:shadow-emerald-500/30 transition-all transform hover:-translate-y-1">
+                    Daftar Menjadi Anggota
+                </a>
+                <a href="#profil" class="px-8 py-4 border border-gray-400 text-base font-bold rounded-xl text-white hover:bg-white/10 backdrop-blur-sm transition-all">
+                    Kenali Kami Lebih Dekat
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TENTANG UKM (SEKILAS) -->
+    <section id="profil" class="py-20 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Teks Tentang -->
+                <div>
+                    <h2 class="font-heading text-emerald-600 font-bold tracking-wider uppercase text-sm mb-2">Tentang UKM</h2>
+                    <h3 class="font-heading text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Mewarisi Tradisi,<br>Membangun Prestasi</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        UKM Pencak Silat Universitas Nahdlatul Ulama Indonesia (UNUSIA) adalah wadah bagi mahasiswa untuk mengembangkan minat dan bakat dalam seni bela diri tradisional Indonesia. Kami berafiliasi kuat dengan nilai-nilai Ahlussunnah wal Jama'ah melalui aliran pencak silat kebanggaan Nahdlatul Ulama, yaitu <strong>Pagar Nusa</strong>.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-emerald-500 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-gray-700"><strong>Pembinaan Mental & Spiritual:</strong> Tidak hanya fisik, kami mengutamakan akhlakul karimah.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-emerald-500 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-gray-700"><strong>Jalur Prestasi Nasional:</strong> Mempersiapkan atlet untuk POMNAS dan kejuaraan nasional.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-emerald-500 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-gray-700"><strong>Solidaritas Keluarga:</strong> Persaudaraan yang erat antar sesama anggota.</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Gambar Tentang -->
+                <div class="relative">
+                    <div class="absolute inset-0 bg-emerald-600 rounded-2xl transform rotate-3 scale-105 opacity-20"></div>
+                    <img src="https://images.unsplash.com/photo-1549471013-3364d73229b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Latihan Silat" class="relative rounded-2xl shadow-xl w-full object-cover h-96">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SAMBUTAN KETUA UKM -->
+    <section class="py-16 bg-emerald-50 border-y border-emerald-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+                <div class="md:w-2/5 h-64 md:h-auto bg-gray-200 relative">
+                    <!-- Placeholder Foto Ketua -->
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Ketua UKM" class="w-full h-full object-cover">
+                </div>
+                <div class="md:w-3/5 p-8 md:p-12 flex flex-col justify-center">
+                    <svg class="w-10 h-10 text-emerald-200 mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" /></svg>
+                    <p class="text-gray-700 italic text-lg mb-6 leading-relaxed">
+                        "Selamat datang para ksatria muda di Kampus UNUSIA. Pencak Silat bukan hanya soal siapa yang menang di gelanggang, tapi tentang menaklukkan ego di dalam diri. Mari berlatih bersama, lestarikan warisan ulama, dan harumkan nama almamater!"
+                    </p>
+                    <div>
+                        <h4 class="font-heading font-bold text-gray-900 text-xl">Ahmad Jaelani</h4>
+                        <p class="text-emerald-600 font-medium text-sm mt-1">Ketua Umum UKM Pencak Silat UNUSIA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KEGIATAN UTAMA -->
+    <section id="kegiatan" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-emerald-600 font-bold tracking-wider uppercase text-sm mb-2">Program Kerja</h2>
+                <h3 class="font-heading text-3xl sm:text-4xl font-bold text-gray-900">Kegiatan Utama Kami</h3>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-gray-50 border border-gray-100 rounded-2xl p-8 hover:shadow-xl hover:bg-emerald-600 hover:text-white transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-emerald-500 group-hover:text-white transition-colors">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h4 class="font-heading text-xl font-bold mb-3 group-hover:text-white">Latihan Rutin</h4>
+                    <p class="text-gray-600 group-hover:text-emerald-50 leading-relaxed">
+                        Dilaksanakan setiap hari Selasa dan Jumat sore di halaman utama kampus B UNUSIA. Terbuka untuk sabuk dasar hingga lanjutan.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-gray-50 border border-gray-100 rounded-2xl p-8 hover:shadow-xl hover:bg-emerald-600 hover:text-white transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-emerald-500 group-hover:text-white transition-colors">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    </div>
+                    <h4 class="font-heading text-xl font-bold mb-3 group-hover:text-white">Diklat Anggota Baru</h4>
+                    <p class="text-gray-600 group-hover:text-emerald-50 leading-relaxed">
+                        Kegiatan tahunan untuk pengesahan dan penerimaan anggota baru (Masa Penerimaan Anggota Baru/MAPABA) secara resmi.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-gray-50 border border-gray-100 rounded-2xl p-8 hover:shadow-xl hover:bg-emerald-600 hover:text-white transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center mb-6 group-hover:bg-emerald-500 group-hover:text-white transition-colors">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                    </div>
+                    <h4 class="font-heading text-xl font-bold mb-3 group-hover:text-white">Pemusatan Latihan (TC)</h4>
+                    <p class="text-gray-600 group-hover:text-emerald-50 leading-relaxed">
+                        Training Center khusus bagi atlet terpilih untuk persiapan menghadapi kejuaraan tingkat daerah maupun nasional.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRESTASI TERBARU -->
+    <section id="prestasi" class="py-20 bg-gray-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-emerald-900/20"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-emerald-400 font-bold tracking-wider uppercase text-sm mb-2">Hall of Fame</h2>
+                <h3 class="font-heading text-3xl sm:text-4xl font-bold text-white">Prestasi Terbaru Kami</h3>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Foto Prestasi 1 -->
+                <div class="group relative overflow-hidden rounded-xl h-64">
+                    <img src="https://images.unsplash.com/photo-1561681302-39c2c62c2f21?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Juara 1" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-5">
+                        <span class="text-emerald-400 font-bold text-sm mb-1">Emas</span>
+                        <h4 class="font-heading font-semibold text-lg">Kejuaraan Nasional 2025</h4>
+                    </div>
+                </div>
+                <!-- Foto Prestasi 2 -->
+                <div class="group relative overflow-hidden rounded-xl h-64">
+                    <img src="https://images.unsplash.com/photo-1574269874534-110196237a6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Juara 2" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-5">
+                        <span class="text-emerald-400 font-bold text-sm mb-1">Perak</span>
+                        <h4 class="font-heading font-semibold text-lg">POMNAS 2024</h4>
+                    </div>
+                </div>
+                <!-- Foto Prestasi 3 -->
+                <div class="group relative overflow-hidden rounded-xl h-64">
+                    <img src="https://images.unsplash.com/photo-1526508006277-3331b67f1a30?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Lomba Silat" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-5">
+                        <span class="text-emerald-400 font-bold text-sm mb-1">Juara Umum 3</span>
+                        <h4 class="font-heading font-semibold text-lg">Pagar Nusa Cup DKI</h4>
+                    </div>
+                </div>
+                <!-- Card Call to Action -->
+                <div class="bg-emerald-800 rounded-xl h-64 flex flex-col items-center justify-center p-6 text-center border border-emerald-600 hover:bg-emerald-700 transition">
+                    <svg class="w-12 h-12 text-emerald-300 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3LBerikut adalah kode lengkap untuk `index.html`. Desain ini menggunakan perpaduan warna hijau dan emas (identik dengan UNUSIA dan pencak silat), dilengkapi efek *hover*, tata letak responsif, dan animasi sederhana agar terlihat modern dan kreatif. Navigasi "Pendaftaran" sudah diarahkan ke `form.html`.
+
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UKM Pencak Silat UNUSIA</title>
+    <link href="[https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap](https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap)" rel="stylesheet">
+    <link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)">
+    <style>
+        /* CSS Reset & Variabel */
+        :root {
+            --primary: #0F5132; /* Hijau NU/UNUSIA */
+            --secondary: #F39C12; /* Emas */
+            --dark: #212529;
+            --light: #F8F9FA;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body { background-color: var(--light); color: var(--dark); }
+
+        /* Navbar */
+        nav {
+            background-color: var(--primary);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .logo { color: white; font-size: 1.5rem; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 10px;}
+        .logo i { color: var(--secondary); }
+        .nav-links { list-style: none; display: flex; gap: 20px; }
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+            padding: 8px 12px;
+            border-radius: 5px;
+        }
+        .nav-links li a:hover, .nav-links li a.active {
+            background-color: var(--secondary);
+            color: var(--dark);
+        }
+        .menu-toggle { display: none; color: white; font-size: 1.5rem; cursor: pointer; }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(15, 81, 50, 0.8), rgba(0, 0, 0, 0.8)), 
+                        url('[https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&q=80&w=1920](https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&q=80&w=1920)') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+        .hero h1 { font-size: 3.5rem; font-weight: 700; margin-bottom: 10px; text-transform: uppercase; }
+        .hero h1 span { color: var(--secondary); }
+        .hero p { font-size: 1.2rem; margin-bottom: 30px; max-width: 600px; }
+        .btn-cta {
+            padding: 12px 30px;
+            background-color: var(--secondary);
+            color: var(--dark);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 30px;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4);
+        }
+        .btn-cta:hover { transform: translateY(-3px); background-color: #d68910; color: white; }
+
+        /* Global Section Styles */
+        section { padding: 80px 5%; }
+        .section-title { text-align: center; font-size: 2.2rem; color: var(--primary); margin-bottom: 40px; position: relative; }
+        .section-title::after {
+            content: ''; width: 60px; height: 4px; background: var(--secondary);
+            display: block; margin: 10px auto 0; border-radius: 2px;
+        }
+
+        /* Sambutan Ketua */
+        .sambutan { display: flex; align-items: center; gap: 40px; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); margin: -50px 5% 40px; position: relative; z-index: 10; }
+        .sambutan-img { flex: 1; border-radius: 10px; overflow: hidden; border: 4px solid var(--secondary); }
+        .sambutan-img img { width: 100%; display: block; }
+        .sambutan-text { flex: 2; }
+        .sambutan-text h3 { color: var(--primary); font-size: 1.8rem; margin-bottom: 10px; }
+        .sambutan-text p { line-height: 1.8; color: #555; }
+        .signature { margin-top: 15px; font-weight: 600; font-style: italic; color: var(--primary); }
+
+        /* Tentang UKM */
+        .tentang { text-align: center; background-color: white; }
+        .tentang p { max-width: 800px; margin: 0 auto 30px; line-height: 1.8; font-size: 1.1rem; color: #555; }
+        .visi-misi { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+        .card { background: var(--light); padding: 30px; border-radius: 10px; flex: 1; min-width: 250px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-top: 4px solid var(--primary); transition: 0.3s; }
+        .card:hover { transform: translateY(-10px); }
+        .card i { font-size: 2.5rem; color: var(--secondary); margin-bottom: 15px; }
+
+        /* Kegiatan */
+        .kegiatan { background-color: var(--primary); color: white; }
+        .kegiatan .section-title { color: white; }
+        .kegiatan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .kegiatan-item { background: rgba(255,255,255,0.1); padding: 25px; border-radius: 10px; backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.2); }
+        .kegiatan-item h3 { color: var(--secondary); margin-bottom: 10px; font-size: 1.3rem; }
+        .kegiatan-item ul { list-style: none; margin-top: 15px; }
+        .kegiatan-item ul li { margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+        .kegiatan-item ul li i { color: var(--secondary); }
+
+        /* Prestasi */
+        .prestasi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .prestasi-card { position: relative; overflow: hidden; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .prestasi-card img { width: 100%; height: 250px; object-fit: cover; transition: 0.5s; }
+        .prestasi-info { position: absolute; bottom: -100%; left: 0; width: 100%; background: linear-gradient(transparent, rgba(15, 81, 50, 0.9)); color: white; padding: 20px; transition: 0.5s; text-align: center; }
+        .prestasi-card:hover img { transform: scale(1.1); }
+        .prestasi-card:hover .prestasi-info { bottom: 0; }
+
+        /* Footer */
+        footer { background-color: var(--dark); color: white; padding: 50px 5% 20px; }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 30px; }
+        .footer-col h4 { color: var(--secondary); margin-bottom: 20px; font-size: 1.2rem; }
+        .footer-col p, .footer-col a { color: #ccc; text-decoration: none; line-height: 1.8; display: block; margin-bottom: 10px; }
+        .social-icons { display: flex; gap: 15px; margin-top: 15px; }
+        .social-icons a { display: inline-flex; width: 40px; height: 40px; background: var(--primary); justify-content: center; align-items: center; border-radius: 50%; color: white; transition: 0.3s; }
+        .social-icons a:hover { background: var(--secondary); transform: scale(1.1); }
+        .copyright { text-align: center; padding-top: 20px; border-top: 1px solid #444; color: #888; font-size: 0.9rem; }
+
+        /* Responsive */
+        @media(max-width: 768px) {
+            .nav-links { position: absolute; top: 60px; right: -100%; flex-direction: column; background-color: var(--primary); width: 100%; text-align: center; padding: 20px 0; transition: 0.3s; box-shadow: 0 5px 10px rgba(0,0,0,0.1); }
+            .nav-links.active { right: 0; }
+            .menu-toggle { display: block; }
+            .hero h1 { font-size: 2.5rem; }
+            .sambutan { flex-direction: column; margin-top: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigasi -->
+    <nav>
+        <a href="#" class="logo"><i class="fa-solid fa-hand-fist"></i> SILAT UNUSIA</a>
+        <div class="menu-toggle" id="mobile-menu"><i class="fa-solid fa-bars"></i></div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#profil">Profil</a></li>
+            <li><a href="#kegiatan">Kegiatan</a></li>
+            <li><a href="#prestasi">Prestasi</a></li>
+            <li><a href="form.html" style="background-color: var(--secondary); color: var(--dark);">Pendaftaran</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <h1>Lestarikan Budaya,<br><span>Cetak Sang Juara</span></h1>
+        <p>Bergabunglah bersama Unit Kegiatan Mahasiswa Pencak Silat Universitas Nahdlatul Ulama Indonesia. Temukan persaudaraan, kesehatan, dan raih prestasimu di sini!</p>
+        <a href="form.html" class="btn-cta">Daftar Sekarang <i class="fa-solid fa-arrow-right"></i></a>
+    </header>
+
+    <!-- Sambutan Ketua UKM -->
+    <div class="sambutan" id="sambutan">
+        <div class="sambutan-img">
+            <!-- Ganti src dengan foto ketua UKM -->
+            <img src="[https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=600](https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=600)" alt="Ketua UKM">
+        </div>
+        <div class="sambutan-text">
+            <h3>Sambutan Ketua UKM</h3>
+            <p>"Salam Pencak Silat! Selamat datang di website resmi UKM Pencak Silat UNUSIA. Di sini, kami tidak hanya berlatih bela diri fisik, melainkan juga menanamkan adab, spiritual, dan mental petarung sejati. Mari bersama-sama mengharumkan nama almamater tercinta lewat jalur prestasi. Kami tunggu kehadiran sahabat-sahabat mahasiswa baru di arena latihan!"</p>
+            <div class="signature">- Ahmad Fauzi, Ketua UKM 2026/2027</div>
+        </div>
+    </div>
+
+    <!-- Tentang UKM -->
+    <section id="profil" class="tentang">
+        <h2 class="section-title">Tentang UKM</h2>
+        <p>UKM Pencak Silat UNUSIA mewadahi minat dan bakat mahasiswa dalam seni bela diri tradisional asli Indonesia, khususnya aliran <strong>Pagar Nusa</strong>. Kami berkomitmen untuk melestarikan tradisi nusantara sekaligus mengembangkan potensi atlet untuk bersaing di tingkat nasional maupun internasional.</p>
+        <div class="visi-misi">
+            <div class="card">
+                <i class="fa-solid fa-eye"></i>
+                <h3>Visi</h3>
+                <p>Menjadi UKM bela diri yang unggul, berprestasi, dan berakhlakul karimah dengan berlandaskan nilai-nilai Ahlussunnah wal Jamaah.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-bullseye"></i>
+                <h3>Misi</h3>
+                <p>Mengadakan latihan rutin yang terstruktur, mencetak atlet berprestasi, dan membangun rasa persaudaraan yang kuat antar anggota.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kegiatan Utama -->
+    <section id="kegiatan" class="kegiatan">
+        <h2 class="section-title">Kegiatan Utama</h2>
+        <div class="kegiatan-grid">
+            <div class="kegiatan-item">
+                <h3><i class="fa-regular fa-calendar-check"></i> Jadwal Latihan Rutin</h3>
+                <p>Terbuka untuk seluruh anggota aktif dan calon anggota.</p>
+                <ul>
+                    <li><i class="fa-solid fa-clock"></i> Rabu, 16.00 - 18.00 WIB (Teknik & Fisik)</li>
+                    <li><i class="fa-solid fa-clock"></i> Jumat, 19.30 - 21.30 WIB (Tanding & Seni)</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Lapangan Utama Kampus UNUSIA</li>
+                </ul>
+            </div>
+            <div class="kegiatan-item">
+                <h3><i class="fa-solid fa-people-group"></i> Program Kerja Tahunan</h3>
+                <p>Agenda wajib yang dirancang untuk meningkatkan kualitas anggota.</p>
+                <ul>
+                    <li><i class="fa-solid fa-campground"></i> Pendidikan & Pelatihan (Diklat) Anggota Baru</li>
+                    <li><i class="fa-solid fa-medal"></i> Seleksi Atlet Kejuaraan Antar Universitas</li>
+                    <li><i class="fa-solid fa-handshake-angle"></i> Buka Bersama & Silaturahmi Lintas Angkatan</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prestasi Terbaru -->
+    <section id="prestasi" class="prestasi">
+        <h2 class="section-title">Prestasi Terbaru</h2>
+        <div class="prestasi-grid">
+            <!-- Item 1 -->
+            <div class="prestasi-card">
+                <img src="[https://images.unsplash.com/photo-1561214078-f3247647fc5e?auto=format&fit=crop&q=80&w=600](https://images.unsplash.com/photo-1561214078-f3247647fc5e?auto=format&fit=crop&q=80&w=600)" alt="Medali Emas">
+                <div class="prestasi-info">
+                    <h4>Medali Emas Tanding Kelas C Putra</h4>
+                    <p>Kejuaraan Mahasiswa Nasional 2025</p>
+                </div>
+            </div>
+            <!-- Item 2 -->
+            <div class="prestasi-card">
+                <img src="[https://images.unsplash.com/photo-1526676037777-05a232554f77?auto=format&fit=crop&q=80&w=600](https://images.unsplash.com/photo-1526676037777-05a232554f77?auto=format&fit=crop&q=80&w=600)" alt="Juara Umum">
+                <div class="prestasi-info">
+                    <h4>Juara Umum III</h4>
+                    <p>Rektor Cup se-DKI Jakarta 2025</p>
+                </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="prestasi-card">
+                <img src="[https://images.unsplash.com/photo-1599058917765-a780eda07a3e?auto=format&fit=crop&q=80&w=600](https://images.unsplash.com/photo-1599058917765-a780eda07a3e?auto=format&fit=crop&q=80&w=600)" alt="Medali Perak">
+                <div class="prestasi-info">
+                    <h4>Medali Perak Seni Tunggal Putri</h4>
+                    <p>Kejuaraan Internasional Terbuka 2026</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontak">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>UKM Pencak Silat UNUSIA</h4>
+                <p>Wadah pembinaan minat dan bakat mahasiswa Universitas Nahdlatul Ulama Indonesia di bidang seni bela diri pencak silat.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Hubungi Kami</h4>
+                <p><i class="fa-solid fa-location-dot"></i> Jl. Taman Amir Hamzah No.5, Menteng, Jakarta Pusat (Sekretariat UKM Gedung A)</p>
+                <p><i class="fa-brands fa-whatsapp"></i> +62 812-3456-7890 (Humas)</p>
+                <p><i class="fa-solid fa-envelope"></i> ukmsilat@unusia.ac.id</p>
+            </div>
+            <div class="footer-col">
+                <h4>Media Sosial</h4>
+                <p>Ikuti keseharian dan update terbaru kami:</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 UKM Pencak Silat UNUSIA. Didesain untuk penerimaan anggota baru.
+        </div>
+    </footer>
+
+    <!-- JavaScript untuk Toggle Menu Mobile -->
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

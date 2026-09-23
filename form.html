@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="id" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pendaftaran UKM Pencak Silat UNUSIA</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    h1, h2, h3, .font-heading { font-family: 'Outfit', sans-serif; }
+
+    @keyframes morphOne {
+      0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; transform: translate(0px, 0px) rotate(0deg) scale(1); }
+      33% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; transform: translate(40px, -60px) rotate(120deg) scale(1.1); }
+      66% { border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%; transform: translate(-30px, 30px) rotate(240deg) scale(0.95); }
+    }
+    @keyframes morphTwo {
+      0%, 100% { border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%; transform: translate(0px, 0px) rotate(0deg); }
+      50% { border-radius: 70% 30% 30% 70% / 40% 60% 40% 60%; transform: translate(-50px, -40px) rotate(-180deg) scale(1.15); }
+    }
+    .blob-1 { animation: morphOne 16s ease-in-out infinite alternate; }
+    .blob-2 { animation: morphTwo 20s ease-in-out infinite alternate; }
+
+    .input-field {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(226, 232, 240, 0.8);
+      border-radius: 0.875rem;
+      padding: 0.75rem 1rem;
+      font-size: 0.875rem;
+      color: #0f172a;
+      outline: none;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .input-field:focus {
+      background: rgba(255, 255, 255, 0.95);
+      border-color: #10b981;
+      box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.12);
+    }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-thumb { background: rgba(16, 185, 129, 0.2); border-radius: 999px; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen relative overflow-x-hidden flex flex-col justify-between">
+
+  <!-- Background Blobs -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div class="blob-1 absolute -top-24 -left-20 w-96 h-96 bg-gradient-to-tr from-emerald-300/40 via-teal-200/30 to-green-100/20 blur-2xl"></div>
+    <div class="blob-2 absolute top-1/2 -right-28 w-80 h-80 bg-gradient-to-br from-emerald-400/30 via-lime-200/20 to-teal-300/30 blur-2xl"></div>
+    <div class="blob-1 absolute -bottom-32 left-1/3 w-80 h-80 bg-gradient-to-t from-teal-200/40 to-emerald-100/20 blur-3xl"></div>
+  </div>
+
+  <main class="relative z-10 w-full max-w-xl mx-auto px-4 py-8 sm:py-12">
+    
+    <!-- Header -->
+    <div class="text-center mb-8 space-y-2">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-700 text-xs font-semibold tracking-wide uppercase">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        UKM Pencak Silat UNUSIA
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">Formulir Pendaftaran</h1>
+      <p class="text-sm text-slate-500 max-w-md mx-auto">Bergabunglah bersama keluarga besar Pencak Silat Universitas Nahdlatul Ulama Indonesia.</p>
+    </div>
+
+    <!-- Promo Banner Dinamis -->
+    <div class="mb-8 p-4 rounded-2xl bg-gradient-to-r from-emerald-500/10 via-teal-500/10 to-emerald-500/5 border border-emerald-500/20 backdrop-blur-md flex items-center gap-3">
+      <div id="promoText" class="text-xs leading-relaxed text-slate-700">
+        Memeriksa sisa kuota pendaftar gratis...
+      </div>
+    </div>
+
+    <!-- Form Utama -->
+    <form id="formPendaftaran" class="bg-white/80 backdrop-blur-xl border border-white/60 shadow-xl shadow-slate-200/50 rounded-3xl p-6 sm:p-8 space-y-5">
+
+      <!-- Email -->
+      <div>
+        <label for="email" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1.5">Email <span class="text-emerald-600">*</span></label>
+        <input type="email" id="email" name="email" required placeholder="nama@domain.com" class="input-field">
+      </div>
+
+      <!-- Nama -->
+      <div>
+        <label for="nama" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1.5">Nama Lengkap <span class="text-emerald-600">*</span></label>
+        <input type="text" id="nama" name="nama" required placeholder="Sesuai kartu mahasiswa" class="input-field">
+      </div>
+
+      <!-- NIM & WhatsApp -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label for="nim" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1.5">NIM <span class="text-emerald-600">*</span></label>
+          <input type="text" id="nim" name="nim" required placeholder="Nomor Induk Mahasiswa" class="input-field">
+        </div>
+        <div>
+          <label for="whatsapp" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1.5">No. WhatsApp <span class="text-emerald-600">*</span></label>
+          <input type="tel" id="whatsapp" name="whatsapp" required placeholder="08xxxxxxxxxx" class="input-field">
+        </div>
+      </div>
+
+      <!-- Fakultas & Prodi -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label for="fakultas" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1.5">Fakultas <span class="text-emerald-600">*</span></label>
+          <select id="fakultas" name="fakultas" required onchange="updateProdi()" class="input-field cursor-pointer">
+            <option value="" disabled selected>Pilih Fakultas</option>
+            <option value="Fakultas Hukum">Fakultas Hukum</option>
+            <option value="Fakultas Islam Nusantara">Fakultas Islam Nusantara</option>
+            <option value="Fakultas Ilmu Sosial">Fakultas Ilmu Sosial</option>
+            <option value="Fakultas Teknik & Ilmu Komputer">Fakultas Teknik & Ilmu Komputer</option>
+            <option value="Fakultas Ekonomi & Bisnis">Fakultas Ekonomi & Bisnis</option>
+            <option value="Fakultas Keguruan & Ilmu Pendidikan">Fakultas Keguruan & Ilmu Pendidikan</option>
+          </select>
+        </div>
+        <div>
+          <label for="prodi" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1.5">Program Studi <span class="text-emerald-600">*</span></label>
+          <select id="prodi" name="prodi" required disabled class="input-field cursor-pointer opacity-60">
+            <option value="" disabled selected>Pilih Fakultas Dulu</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Ukuran Baju -->
+      <div>
+        <label for="sizeBaju" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1.5">Ukuran Baju / Kaos <span class="text-emerald-600">*</span></label>
+        <select id="sizeBaju" name="sizeBaju" required class="input-field cursor-pointer">
+          <option value="" disabled selected>Pilih Ukuran</option>
+          <option value="S">S - Small</option>
+          <option value="M">M - Medium</option>
+          <option value="L">L - Large</option>
+          <option value="XL">XL - Extra Large</option>
+          <option value="XXL">XXL - Double Extra Large</option>
+          <option value="XXXL">XXXL - Triple Extra Large</option>
+        </select>
+      </div>
+
+      <!-- Biaya & Kuota Pendaftaran -->
+      <div id="sectionBuktiBayar" class="space-y-2">
+        <div class="flex items-center justify-between">
+          <label class="block text-xs font-semibold uppercase tracking-wider text-slate-600">
+            Biaya Pendaftaran <span class="text-slate-400 font-normal">(Rp10.000)</span>
+          </label>
+          <span id="badgeBayar" class="text-[10px] font-bold px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-700 border border-emerald-300">
+            MEMERIKSA...
+          </span>
+        </div>
+
+        <!-- Info Kuota Gratis -->
+        <div id="infoGratisBox" class="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-center space-y-1">
+          <p id="teksInfoGratis" class="text-xs font-bold text-emerald-800">
+            Memeriksa sisa kuota pendaftaran...
+          </p>
+          <p class="text-[11px] text-emerald-600 italic">
+            Anda tidak perlu melakukan pembayaran atau mengunggah bukti bayar selama kuota gratis masih ada.
+          </p>
+        </div>
+
+        <!-- Info Rekening (Jika Kuota Habis) -->
+        <div id="infoRekeningBox" class="hidden p-3.5 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-xs text-slate-700 space-y-1.5">
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-amber-900">Pembayaran Transfer:</span>
+            <span class="font-bold text-amber-800 bg-amber-100 px-2 py-0.5 rounded text-[11px]">E-Wallet DANA</span>
+          </div>
+          <div class="p-2.5 rounded-xl bg-white/80 border border-amber-200/60 font-mono text-slate-800 space-y-0.5">
+            <p><strong>Nomor:</strong> 085719625613</p>
+            <p><strong>A.n:</strong> Erina Safitri</p>
+          </div>
+        </div>
+
+        <!-- File Upload Bukti Bayar -->
+        <div id="wrapperInputBayar" class="hidden space-y-1 pt-1">
+          <div class="relative group">
+            <input type="file" id="buktiBayar" name="buktiBayar" accept="image/*,.pdf" onchange="displayFileName('buktiBayar', 'namaFileBayar')" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10">
+            <div class="input-field flex items-center justify-between group-hover:border-emerald-400">
+              <span id="namaFileBayar" class="text-slate-400 truncate">Unggah Bukti Transfer (PDF/Gambar)</span>
+              <span class="text-xs bg-emerald-100 text-emerald-700 font-medium px-2.5 py-1 rounded-lg shrink-0">Pilih File</span>
+            </div>
+          </div>
+          <p class="text-[11px] text-rose-600 font-medium">*Wajib melampirkan bukti transfer pembayaran.</p>
+        </div>
+      </div>
+
+      <!-- Bukti Follow IG -->
+      <div class="space-y-1.5">
+        <label class="block text-xs font-semibold tracking-wider text-slate-600">
+          Bukti Follow IG <a href="https://www.instagram.com/ukm.pencaksilatunusia" target="_blank" rel="noopener noreferrer">
+  <span class="text-emerald-600">@ukm.pencaksilatunusia</span>
+</a>
+        </label>
+        <div class="relative group">
+          <input type="file" id="buktiFollow" name="buktiFollow" accept="image/*" required onchange="displayFileName('buktiFollow', 'namaFileFollow')" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10">
+          <div class="input-field flex items-center justify-between group-hover:border-emerald-400">
+            <span id="namaFileFollow" class="text-slate-400 truncate">Unggah Tangkapan Layar (Screenshot)</span>
+            <span class="text-xs bg-emerald-100 text-emerald-700 font-medium px-2.5 py-1 rounded-lg shrink-0">Pilih Gambar</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Checkbox Pernyataan -->
+      <div class="pt-2">
+        <label class="flex items-start gap-3 cursor-pointer group">
+          <input type="checkbox" id="pernyataanNiat" name="pernyataanNiat" required class="mt-0.5 w-4 h-4 text-emerald-600 rounded border-slate-300 focus:ring-emerald-500">
+          <span class="text-xs text-slate-600 leading-relaxed group-hover:text-slate-900 transition">
+            <strong class="text-slate-800">Pernyataan Niat:</strong> Saya berminat dan berkomitmen mengikuti kegiatan latihan serta mematuhi seluruh peraturan UKM Pencak Silat UNUSIA.
+          </span>
+        </label>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="pt-2">
+        <button type="submit" id="btnSubmit" class="w-full relative group overflow-hidden rounded-2xl bg-gradient-to-r from-emerald-600 via-emerald-700 to-teal-700 text-white font-semibold py-3.5 px-6 shadow-lg shadow-emerald-700/25 hover:shadow-xl transition duration-300 active:scale-[0.99] flex items-center justify-center gap-2">
+          <span class="absolute inset-0 w-full h-full bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
+          <span id="btnText" class="relative z-10 font-heading tracking-wide">Kirim Pendaftaran</span>
+          <div id="btnSpinner" class="hidden relative z-10 w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+        </button>
+      </div>
+
+    </form>
+  </main>
+
+  <!-- Modal Sukses -->
+  <div id="statusModal" class="hidden fixed inset-0 bg-slate-900/40 backdrop-blur-sm flex items-center justify-center p-4 z-50">
+    <div class="bg-white/90 backdrop-blur-2xl border border-white rounded-3xl p-6 sm:p-8 max-w-sm w-full text-center shadow-2xl space-y-4">
+      <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mx-auto text-2xl shadow-inner">✓</div>
+      <div class="space-y-1">
+        <h3 class="text-xl font-bold font-heading text-slate-900">Pendaftaran Terkirim!</h3>
+        <p class="text-xs text-slate-500 leading-relaxed">Data pendaftaran dan berkas Anda telah tercatat. Panitia akan menghubungi Anda melalui WhatsApp.</p>
+      </div>
+      <button onclick="closeModal()" class="w-full bg-slate-900 text-white py-3 rounded-xl font-medium text-xs hover:bg-slate-800 transition">Tutup & Selesai</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="relative z-10 text-center py-6 text-xs text-slate-400">
+    &copy; UKM Pencak Silat UNUSIA. All rights reserved.
+  </footer>
+
+  <script>
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzgDCDKsbr0p2MDZo9zkZCAmsY-1Gxk-uBgc8vvEpIbneq5Y-zM214cqVGnvfTGspz8vw/exec";
+
+    const dataProdi = {
+      "Fakultas Hukum": ["S1 - Ilmu Hukum", "S1 - Hukum Keluarga (Ahwal Syakhshiyah)"],
+      "Fakultas Islam Nusantara": ["S1 - Sejarah Peradaban Islam"],
+      "Fakultas Ilmu Sosial": ["S1 - Psikologi", "S1 - Sosiologi"],
+      "Fakultas Teknik & Ilmu Komputer": ["S1 - Teknik Informatika", "S1 - Sistem Informasi", "S1 - Teknik Industri", "S1 - Teknologi Agroindustri"],
+      "Fakultas Ekonomi & Bisnis": ["S1 - Akuntansi", "S1 - Ekonomi Syariah"],
+      "Fakultas Keguruan & Ilmu Pendidikan": ["S1 - Pendidikan Agama Islam", "S1 - Pendidikan Guru Madrasah Ibtidaiyah (PGMI)", "S1 - Pendidikan Anak Usia Dini (PAUD)", "S1 - Tadris Bahasa Inggris", "S2 - Magister Pendidikan Agama Islam"]
+    };
+
+    // Fungsi Pengecekan Kuota Otomatis & Live Update
+    async function checkKuotaPendaftar() {
+      const promoText = document.getElementById("promoText");
+      const buktiBayarInput = document.getElementById("buktiBayar");
+      const badgeBayar = document.getElementById("badgeBayar");
+      const infoGratisBox = document.getElementById("infoGratisBox");
+      const teksInfoGratis = document.getElementById("teksInfoGratis");
+      const infoRekeningBox = document.getElementById("infoRekeningBox");
+      const wrapperInputBayar = document.getElementById("wrapperInputBayar");
+
+      const MAX_KUOTA = 10;
+
+      try {
+        const response = await fetch(SCRIPT_URL);
+        if (!response.ok) throw new Error("Gagal mengambil data");
+
+        const data = await response.json();
+        const totalPendaftar = parseInt(data.totalPendaftar) || 0;
+        const sisaKuota = Math.max(0, MAX_KUOTA - totalPendaftar);
+
+        if (sisaKuota > 0) {
+          // TAMPILAN KUOTA MASIH TERSEDIA
+          promoText.innerHTML = `<span class="font-bold text-emerald-800">Pendaftaran Gratis!</span> Sisa <strong class="text-emerald-900 bg-emerald-200/60 px-1.5 py-0.5 rounded font-black">${sisaKuota} dari ${MAX_KUOTA} slot</strong> pendaftaran gratis. Selesaikan pendaftaran sekarang!`;
+          
+          teksInfoGratis.innerHTML = `Sisa Slot Gratis: <strong class="text-sm font-extrabold text-emerald-900">${sisaKuota} / ${MAX_KUOTA} Orang</strong>`;
+
+          infoGratisBox.classList.remove("hidden");
+          infoRekeningBox.classList.add("hidden");
+          wrapperInputBayar.classList.add("hidden");
+
+          buktiBayarInput.required = false;
+          badgeBayar.textContent = `GRATIS (${sisaKuota} SLOT)`;
+          badgeBayar.className = "text-[10px] font-bold px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-700 border border-emerald-300 animate-pulse";
+        } else {
+          // TAMPILAN KUOTA HABIS
+          promoText.innerHTML = `<span class="font-bold text-amber-800">⚠️ Kuota Gratis (${MAX_KUOTA}/${MAX_KUOTA}) Habis!</span> Pendaftaran selanjutnya dikenakan biaya <strong>Rp10.000</strong>.`;
+
+          infoGratisBox.classList.add("hidden");
+          infoRekeningBox.classList.remove("hidden");
+          wrapperInputBayar.classList.remove("hidden");
+
+          buktiBayarInput.required = true;
+          badgeBayar.textContent = "WAJIB BAYAR";
+          badgeBayar.className = "text-[10px] font-bold px-2 py-0.5 rounded-md bg-rose-100 text-rose-700 border border-rose-300";
+        }
+      } catch (error) {
+        // Fallback Tampilan bila Fetch Terkendala
+        promoText.innerHTML = `<span class="font-bold text-slate-800">Promo Pendaftaran Gratis:</span> Tersedia untuk 10 pendaftar pertama!`;
+        teksInfoGratis.textContent = "Kuota pendaftaran gratis terbatas untuk 10 orang pertama.";
+        badgeBayar.textContent = "GRATIS";
+        buktiBayarInput.required = false;
+      }
+    }
+
+    // Jalankan Pengecekan Saat Load & Auto-Refresh Setiap 5 Detik (Live Update)
+    document.addEventListener("DOMContentLoaded", () => {
+      checkKuotaPendaftar();
+      setInterval(checkKuotaPendaftar, 5000);
+    });
+
+    function updateProdi() {
+      const fakultasSelect = document.getElementById("fakultas");
+      const prodiSelect = document.getElementById("prodi");
+      const selectedFakultas = fakultasSelect.value;
+
+      prodiSelect.innerHTML = '<option value="" disabled selected>Pilih Program Studi</option>';
+
+      if (selectedFakultas && dataProdi[selectedFakultas]) {
+        prodiSelect.disabled = false;
+        prodiSelect.classList.remove("opacity-60");
+
+        dataProdi[selectedFakultas].forEach(prodi => {
+          const option = document.createElement("option");
+          option.value = prodi;
+          option.textContent = prodi;
+          prodiSelect.appendChild(option);
+        });
+      } else {
+        prodiSelect.disabled = true;
+        prodiSelect.classList.add("opacity-60");
+      }
+    }
+
+    function displayFileName(inputId, labelId) {
+      const input = document.getElementById(inputId);
+      const label = document.getElementById(labelId);
+      if (input.files && input.files[0]) {
+        label.textContent = input.files[0].name;
+        label.classList.remove("text-slate-400");
+        label.classList.add("text-emerald-700", "font-medium");
+      }
+    }
+
+    function readFileAsBase64(file) {
+      return new Promise((resolve, reject) => {
+        if (!file) { resolve(null); return; }
+        const reader = new FileReader();
+        reader.onload = () => {
+          const base64String = reader.result.split(',')[1];
+          resolve({ filename: file.name, mimeType: file.type, data: base64String });
+        };
+        reader.onerror = error => reject(error);
+        reader.readAsDataURL(file);
+      });
+    }
+
+    document.getElementById("formPendaftaran").addEventListener("submit", async function(e) {
+      e.preventDefault();
+
+      const btnSubmit = document.getElementById("btnSubmit");
+      const btnText = document.getElementById("btnText");
+      const btnSpinner = document.getElementById("btnSpinner");
+
+      btnSubmit.disabled = true;
+      btnText.textContent = "Mengirim...";
+      btnSpinner.classList.remove("hidden");
+
+      try {
+        const fileBayarInput = document.getElementById("buktiBayar").files[0];
+        const fileFollowInput = document.getElementById("buktiFollow").files[0];
+
+        const fileBayarData = await readFileAsBase64(fileBayarInput);
+        const fileFollowData = await readFileAsBase64(fileFollowInput);
+
+        const formData = {
+          email: document.getElementById("email").value,
+          nama: document.getElementById("nama").value,
+          nim: document.getElementById("nim").value,
+          whatsapp: document.getElementById("whatsapp").value,
+          fakultas: document.getElementById("fakultas").value,
+          prodi: document.getElementById("prodi").value,
+          sizeBaju: document.getElementById("sizeBaju").value,
+          pernyataanNiat: document.getElementById("pernyataanNiat").checked ? "Setuju" : "Tidak",
+          buktiBayar: fileBayarData,
+          buktiFollow: fileFollowData
+        };
+
+        await fetch(SCRIPT_URL, {
+          method: "POST",
+          body: JSON.stringify(formData)
+        });
+
+        btnSubmit.disabled = false;
+        btnText.textContent = "Kirim Pendaftaran";
+        btnSpinner.classList.add("hidden");
+
+        document.getElementById("statusModal").classList.remove("hidden");
+        document.getElementById("formPendaftaran").reset();
+        
+        document.getElementById("namaFileBayar").textContent = "Unggah Bukti Transfer (PDF/Gambar)";
+        document.getElementById("namaFileBayar").className = "text-slate-400 truncate";
+        document.getElementById("namaFileFollow").textContent = "Unggah Tangkapan Layar (Screenshot)";
+        document.getElementById("namaFileFollow").className = "text-slate-400 truncate";
+
+        updateProdi();
+        checkKuotaPendaftar();
+
+      } catch (error) {
+        alert("Gagal memproses pendaftaran. Silakan coba lagi.");
+        btnSubmit.disabled = false;
+        btnText.textContent = "Kirim Pendaftaran";
+        btnSpinner.classList.add("hidden");
+      }
+    });
+
+    function closeModal() {
+      document.getElementById("statusModal").classList.add("hidden");
+    }
+  </script>
+</body>
+</html>
