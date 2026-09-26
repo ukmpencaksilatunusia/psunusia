@@ -1,0 +1,1306 @@
+<!doctype html>
+
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+      name="viewport"
+    />
+    <meta content="mobile_tab" name="shell-type" />
+    <title>Pendaftaran Anggota UKM Pencak Silat Unusia</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Times+New+Roman,+serif:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @layer base {
+        html,
+        body {
+          width: 100vw;
+          margin: 0;
+          padding: 0;
+          background-color: #fbf8ff;
+          color: #1a1b22;
+          font-family: "Times New Roman", serif;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        .pb-safe {
+          padding-bottom: env(safe-area-inset-bottom, 0px);
+        }
+        .pt-safe {
+          padding-top: env(safe-area-inset-top, 0px);
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      select option:checked {
+        background-color: #680a18;
+        color: #ffffff;
+      }
+      select option:hover {
+        background-color: #680a18;
+        color: #ffffff;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error-container": "#93000a",
+              "on-surface": "#1a1b22",
+              "on-primary": "#ffffff",
+              "primary-container": "#680a18",
+              primary: "#44000a",
+              "secondary-fixed": "#e5e1e4",
+              "tertiary-container": "#6c0014",
+              "on-primary-fixed-variant": "#85212a",
+              surface: "#fbf8ff",
+              "secondary-container": "#e5e1e4",
+              "on-tertiary-fixed": "#410008",
+              "inverse-surface": "#2f3038",
+              secondary: "#5f5e60",
+              "inverse-on-surface": "#f1effa",
+              tertiary: "#440009",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed": "#410009",
+              "error-container": "#ffdad6",
+              "on-secondary-fixed": "#1b1b1d",
+              "on-background": "#1a1b22",
+              background: "#fbf8ff",
+              "on-error": "#ffffff",
+              "surface-variant": "#e3e1ec",
+              "on-tertiary": "#ffffff",
+              "on-surface-variant": "#574241",
+              "surface-container": "#eeedf7",
+              "inverse-primary": "#ffb3b2",
+              "surface-tint": "#a43940",
+              "secondary-fixed-dim": "#c8c6c8",
+              "surface-container-highest": "#e3e1ec",
+              "on-secondary-fixed-variant": "#474649",
+              "surface-container-high": "#e8e7f1",
+              "surface-dim": "#dad9e3",
+              error: "#ba1a1a",
+              "primary-fixed": "#ffdad9",
+              "tertiary-fixed-dim": "#ffb3b2",
+              "on-tertiary-container": "#fb6d71",
+              "on-primary-container": "#f27377",
+              "tertiary-fixed": "#ffdad9",
+              "on-secondary": "#ffffff",
+              "on-tertiary-fixed-variant": "#8a1825",
+              "primary-fixed-dim": "#ffb3b2",
+              "on-secondary-container": "#656466",
+              "surface-container-low": "#f4f2fd",
+              "surface-bright": "#fbf8ff",
+              "outline-variant": "#ddc0bf",
+              outline: "#8a7171",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            spacing: {
+              "space-xs": "0.25rem",
+              "gutter-sm": "1rem",
+              margin: "2rem",
+              gutter: "1.5rem",
+              "margin-lg": "4rem",
+              "margin-sm": "1rem",
+              "space-md": "1rem",
+              "space-lg": "1.5rem",
+              "space-sm": "0.5rem",
+              "space-xl": "2.5rem",
+            },
+            fontFamily: {
+              "display-lg-mobile": ['"Times New Roman, serif"'],
+              "headline-lg": ['"Times New Roman, serif"'],
+              "label-sm": ['"Times New Roman, serif"'],
+              "subhead-lg": ['"Times New Roman, serif"'],
+              "headline-md": ['"Times New Roman, serif"'],
+              "body-sm": ['"Times New Roman, serif"'],
+              "label-md": ['"Times New Roman, serif"'],
+              "headline-sm": ['"Times New Roman, serif"'],
+              "label-lg": ['"Times New Roman, serif"'],
+              "display-lg": ['"Times New Roman, serif"'],
+              "headline-lg-mobile": ['"Times New Roman, serif"'],
+              "body-lg": ['"Times New Roman, serif"'],
+              "body-md": ['"Times New Roman, serif"'],
+            },
+            fontSize: {
+              "display-lg-mobile": [
+                "32px",
+                {
+                  lineHeight: "40px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-lg": [
+                "32px",
+                {
+                  lineHeight: "40px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "700",
+                },
+              ],
+              "label-sm": [
+                "11px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.05em",
+                  fontWeight: "700",
+                },
+              ],
+              "subhead-lg": ["18px", { lineHeight: "26px", fontWeight: "700" }],
+              "headline-md": [
+                "24px",
+                { lineHeight: "32px", fontWeight: "700" },
+              ],
+              "body-sm": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+              "label-md": [
+                "13px",
+                {
+                  lineHeight: "18px",
+                  letterSpacing: "0.06em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-sm": [
+                "20px",
+                { lineHeight: "28px", fontWeight: "700" },
+              ],
+              "label-lg": [
+                "15px",
+                {
+                  lineHeight: "20px",
+                  letterSpacing: "0.04em",
+                  fontWeight: "700",
+                },
+              ],
+              "display-lg": [
+                "48px",
+                {
+                  lineHeight: "56px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-lg-mobile": [
+                "26px",
+                { lineHeight: "34px", fontWeight: "700" },
+              ],
+              "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+              "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+      class="flex-1 flex flex-col relative w-full pt-0 pb-0 bg-surface min-h-screen"
+    >
+      <div class="flex flex-col w-full text-on-surface font-body-md">
+        <!-- HERO BANNER SECTION (Dark Maroon Heritage Canvas) -->
+        <section
+          class="relative w-full bg-primary text-on-primary overflow-hidden px-4 md:px-gutter py-8 md:py-10 shadow-[0_4px_20px_rgba(26,27,34,0.35)]"
+        >
+          <!-- Blueprint Grid & Halftone Motif Layer -->
+          <div
+            class="absolute inset-0 pointer-events-none opacity-[0.07]"
+            style="
+              background-image:
+                linear-gradient(to right, #ffffff 1px, transparent 1px),
+                linear-gradient(to bottom, #ffffff 1px, transparent 1px);
+              background-size: 32px 32px;
+            "
+          ></div>
+          <div
+            class="relative z-10 flex flex-col items-center text-center max-w-2xl mx-auto"
+          >
+            <!-- Logo Section (UKM Kiri - UNUSIA Kanan) -->
+            <div class="relative mb-3 md:mb-4 flex items-center justify-center gap-2 md:gap-4">
+              <!-- Logo UKM Kiri -->
+              <div class="w-16 md:w-20 h-16 md:h-20 rounded-full bg-surface-container-lowest p-1.5 shadow-lg flex items-center justify-center">
+                <img
+                  alt="Logo UKM Pencak Silat UNUSIA"
+                  class="w-full h-full object-contain rounded-full"
+                  src="logo/unusia.png"
+                />
+              </div>
+              <!-- Logo UNUSIA Kanan -->
+              <div class="w-16 md:w-20 h-16 md:h-20 rounded-full bg-surface-container-lowest p-1.1 shadow-lg flex items-center justify-center">
+                <img
+                  alt="Logo UNUSIA"
+                  class="w-full h-full object-contain rounded-full"
+                  src="logo/ukm.png"
+                />
+              </div>
+            </div>
+
+            <!-- Main Headline in Times New Roman Bold -->
+            <h1
+              class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg md:text-display-lg uppercase tracking-tight text-on-primary drop-shadow-sm px-2"
+            >
+              PENDAFTARAN ANGGOTA BARU
+            </h1>
+            <!-- Subtitle & Ceremonial Divider -->
+            <div class="flex items-center justify-center gap-2 md:gap-3 mt-2">
+              <span class="w-6 md:w-8 h-[1px] bg-primary-fixed-dim/60"></span>
+              <span
+                class="font-label-lg md:font-subhead-lg text-label-lg md:text-subhead-lg text-[#E2B857] tracking-wider uppercase text-sm md:text-base"
+              >
+                UKM PENCAK SILAT UNUSIA
+              </span>
+              <span class="w-6 md:w-8 h-[1px] bg-primary-fixed-dim/60"></span>
+            </div>
+            <!-- Tagline / Ethos -->
+            <p
+              class="font-body-sm md:font-body-lg text-body-sm md:text-body-lg italic text-on-primary/90 mt-2 md:mt-3 max-w-md px-3 leading-relaxed"
+            >
+              Bergabunglah bersama keluarga besar UKM Pencak Silat Universitas Nahdlatul Ulama Indonesia.
+            </p>
+          </div>
+        </section>
+
+          <!-- KUOTA GRATIS LIVE UPDATE SECTION -->
+          <div class="w-full px-4 md:px-gutter max-w-4xl mx-auto py-2 relative z-20">
+            <div id="quotaPromoBox" class="mb-2 p-5 md:p-6 rounded-lg bg-gradient-to-r from-emerald-50/70 via-emerald-50/50 to-teal-50/40 border-2 border-emerald-700/25 backdrop-blur-md flex items-center gap-4 shadow-md transition-all duration-300">
+              <div id="quotaIconBox" class="flex-shrink-0">
+                <span class="material-symbols-outlined text-emerald-700 text-[28px]" style="font-variation-settings: &quot;FILL&quot; 1">check_circle</span>
+              </div>
+              <div id="quotaPromoText" class="text-base leading-relaxed text-slate-800 font-medium flex-grow">
+                Memeriksa sisa kuota pendaftar gratis...
+              </div>
+            </div>
+          </div>
+
+                  <!-- SUCCESS PAGE - FULL PAGE DISPLAY -->
+        <div id="successPage" class="hidden w-full px-4 md:px-gutter max-w-4xl mx-auto py-12 relative z-20">
+          <div class="bg-white rounded-2xl shadow-xl border border-emerald-200 p-8 md:p-12 text-center space-y-8">
+            <!-- Large Success Icon -->
+            <div class="flex justify-center">
+              <div class="w-32 h-32 bg-gradient-to-br from-emerald-400 to-emerald-600 text-white rounded-full flex items-center justify-center shadow-lg">
+                <span class="material-symbols-outlined text-[80px]" style="font-variation-settings: &quot;FILL&quot; 1">task_alt</span>
+              </div>
+            </div>
+
+            <!-- Main Title -->
+            <div class="space-y-3">
+              <h1 class="text-4xl md:text-5xl font-bold text-slate-900">Pendaftaran Berhasil!</h1>
+              <p class="text-lg text-slate-600">Selamat bergabung dengan keluarga besar UKM Pencak Silat UNUSIA</p>
+            </div>
+
+            <!-- Confirmation Details Box -->
+            <div class="bg-emerald-50 border-2 border-emerald-300 rounded-xl p-6 md:p-8 space-y-4">
+              <h2 class="text-lg font-bold text-emerald-900">Apa Selanjutnya?</h2>
+              <div class="space-y-3 text-left">
+                <div class="flex items-start gap-3">
+                  <div class="w-8 h-8 bg-emerald-500 text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold">1</div>
+                  <div>
+                    <p class="font-semibold text-slate-900">Admin akan menghubungi Anda</p>
+                    <p class="text-sm text-slate-600">Kami akan menghubungi melalui WhatsApp dalam waktu 24 jam</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-8 h-8 bg-emerald-500 text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold">2</div>
+                  <div>
+                    <p class="font-semibold text-slate-900">Verifikasi data</p>
+                    <p class="text-sm text-slate-600">Admin akan memverifikasi data dan informasi pendaftaran Anda</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-8 h-8 bg-emerald-500 text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold">3</div>
+                  <div>
+                    <p class="font-semibold text-slate-900">Bergabung ke group</p>
+                    <p class="text-sm text-slate-600">Dapatkan link group WhatsApp eksklusif untuk anggota baru</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="space-y-3">
+              <!-- WhatsApp Group Button -->
+              <a href="https://chat.whatsapp.com/YOUR_GROUP_LINK" target="_blank" class="w-full flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-6 rounded-xl transition-colors duration-200 text-lg">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347m-5.421 7.461c-1.92 0-3.805-.516-5.459-1.493l-.391-.231-4.06 1.065 1.084-3.958-.255-.405c-1.073-1.708-1.64-3.69-1.64-5.719 0-5.83 4.743-10.573 10.576-10.573 2.824 0 5.48 1.1 7.477 3.098 1.997 1.998 3.095 4.654 3.095 7.479 0 5.832-4.742 10.576-10.577 10.576m0-21.843c-6.52 0-11.83 5.31-11.83 11.83 0 2.083.541 4.116 1.571 5.905l-1.669 6.096 6.236-1.636c1.729.943 3.684 1.442 5.692 1.442 6.52 0 11.83-5.31 11.83-11.83 0-3.16-1.23-6.13-3.463-8.363s-5.203-3.464-8.367-3.464"/>
+                </svg>
+                Masuk ke Group WhatsApp Anggota Baru
+              </a>
+
+              <!-- Back Button -->
+              <button onclick="backToForm()" class="w-full bg-slate-300 hover:bg-slate-400 text-slate-900 font-bold py-4 px-6 rounded-xl transition-colors duration-200">
+                Kembali ke Form Pendaftaran
+              </button>
+            </div>
+
+            <!-- Footer Text -->
+            <div class="text-sm text-slate-500 italic border-t border-slate-200 pt-6">
+              <p>Terima kasih telah bergabung dengan UKM Pencak Silat UNUSIA</p>
+              <p class="text-xs mt-2">Untuk pertanyaan lebih lanjut, hubungi admin melalui WhatsApp</p>
+            </div>
+          </div>
+        </div>
+<!-- FORM & CONTENT LAYOUT CONTAINER -->
+          <section class="w-full px-4 md:px-gutter max-w-4xl mx-auto py-1 relative z-20">
+            <div class="grid grid-cols-1 gap-8 items-start">
+             
+             <!-- FORM MAIN COLUMN (Full Width) -->
+             <div class="bg-surface-container-lowest rounded-xl shadow-[0_8px_24px_rgba(68,0,10,0.12)] border border-primary/10 p-6 md:p-8 relative overflow-hidden">
+              <!-- Faint Background Watermark Seal -->
+              <div
+                class="absolute -bottom-10 -right-10 w-56 h-56 opacity-[0.03] pointer-events-none text-primary"
+              >
+                <svg fill="currentColor" viewbox="0 0 100 100">
+                  <polygon
+                    points="50,5 61,35 95,35 68,57 79,91 50,70 21,91 32,57 5,35 39,35"
+                  ></polygon>
+                </svg>
+              </div>
+
+              <!-- Form Heading -->
+              <div class="mb-6 pb-4 border-b border-primary/20">
+                <div class="flex items-center gap-2 mb-1">
+                  <span
+                    class="material-symbols-outlined text-primary text-[24px]"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >assignment</span
+                  >
+                  <h2
+                    class="font-headline-md text-headline-md text-primary tracking-tight"
+                  >
+                    Formulir Pendaftaran Anggota Baru
+                  </h2>
+                </div>
+                <p class="font-body-md text-body-md text-secondary leading-snug">
+                  Silakan lengkapi formulir di bawah ini dengan data yang valid dan dapat dipertanggungjawabkan.
+                </p>
+              </div>
+
+              <!-- Registration Form -->
+              <form
+                class="flex flex-col gap-6"
+                id="pendaftaran-form"
+              >
+                <!-- SECTION 1: DATA DIRI & KONTAK -->
+                <div class="bg-surface-container-low/40 p-4 md:p-5 rounded-lg border border-primary/10">
+                  <h3 class="font-label-lg text-label-lg text-primary uppercase tracking-wider mb-4 flex items-center gap-2 border-b border-primary/10 pb-2">
+                    <span class="material-symbols-outlined text-[18px]">person</span>
+                    <span>Data Diri & Kontak</span>
+                  </h3>
+                  
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Field 1: Nama Lengkap -->
+                    <div class="flex flex-col">
+                      <label
+                        class="font-label-md text-label-md text-on-surface mb-1 flex items-center"
+                        for="nama_lengkap"
+                      >
+                        Nama Lengkap <span class="text-error ml-0.5">*</span>
+                      </label>
+                      <input
+                        class="w-full bg-white text-on-surface placeholder:text-secondary/70 placeholder:italic font-body-md text-body-md p-3 rounded-lg border border-primary/30 focus:bg-white focus:border-[#680a18] focus:outline-none focus:ring-2 focus:ring-[#680a18]/20 transition-all duration-150"
+                        id="nama_lengkap"
+                        name="nama_lengkap"
+                        placeholder="Masukkan nama lengkap"
+                        required=""
+                        type="text"
+                      />
+                    </div>
+
+                    <!-- Field 2: Email -->
+                    <div class="flex flex-col">
+                      <label
+                        class="font-label-md text-label-md text-on-surface mb-1 flex items-center"
+                        for="email"
+                      >
+                        Email <span class="text-error ml-0.5">*</span>
+                      </label>
+                      <input
+                        class="w-full bg-white text-on-surface placeholder:text-secondary/70 placeholder:italic font-body-md text-body-md p-3 rounded-lg border border-primary/30 focus:bg-white focus:border-[#680a18] focus:outline-none focus:ring-2 focus:ring-[#680a18]/20 transition-all duration-150"
+                        id="email"
+                        name="email"
+                        placeholder="Masukkan alamat email"
+                        required=""
+                        type="email"
+                      />
+                    </div>
+
+                    <!-- Field 3: NIM -->
+                    <div class="flex flex-col">
+                      <label
+                        class="font-label-md text-label-md text-on-surface mb-1 flex items-center"
+                        for="nim"
+                      >
+                        NIM (Nomor Induk Mahasiswa)
+                        <span class="text-error ml-0.5">*</span>
+                      </label>
+                      <input
+                        class="w-full bg-white text-on-surface placeholder:text-secondary/70 placeholder:italic font-body-md text-body-md p-3 rounded-lg border border-primary/30 focus:bg-white focus:border-[#680a18] focus:outline-none focus:ring-2 focus:ring-[#680a18]/20 transition-all duration-150"
+                        id="nim"
+                        name="nim"
+                        placeholder="Masukkan NIM"
+                        required=""
+                        type="text"
+                      />
+                    </div>
+
+                    <!-- Field 4: Nomor WhatsApp -->
+                    <div class="flex flex-col">
+                      <label
+                        class="font-label-md text-label-md text-on-surface mb-1 flex items-center"
+                        for="whatsapp"
+                      >
+                        Nomor WhatsApp <span class="text-error ml-0.5">*</span>
+                      </label>
+                      <input
+                        class="w-full bg-white text-on-surface placeholder:text-secondary/70 placeholder:italic font-body-md text-body-md p-3 rounded-lg border border-primary/30 focus:bg-white focus:border-[#680a18] focus:outline-none focus:ring-2 focus:ring-[#680a18]/20 transition-all duration-150"
+                        id="whatsapp"
+                        name="whatsapp"
+                        placeholder="Masukkan nomor WhatsApp aktif"
+                        required=""
+                        type="tel"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- SECTION 2: INFORMASI AKADEMIK & KAMPUS -->
+                <div class="bg-surface-container-low/40 p-4 md:p-5 rounded-lg border border-primary/10">
+                  <h3 class="font-label-lg text-label-lg text-primary uppercase tracking-wider mb-4 flex items-center gap-2 border-b border-primary/10 pb-2">
+                    <span class="material-symbols-outlined text-[18px]">school</span>
+                    <span>Data Akademik</span>
+                  </h3>
+
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Field 5: Fakultas -->
+                    <div class="flex flex-col">
+                      <label
+                        class="font-label-md text-label-md text-on-surface mb-1 flex items-center"
+                        for="fakultas"
+                      >
+                        Fakultas <span class="text-error ml-0.5">*</span>
+                      </label>
+                      <div class="relative">
+                        <select
+                          class="w-full bg-white text-on-surface font-body-md text-body-md p-3 rounded-lg border border-primary/30 focus:bg-white focus:border-[#680a18] focus:outline-none focus:ring-2 focus:ring-[#680a18]/20 hover:border-[#680a18] cursor-pointer appearance-none transition-all duration-150 pr-10"
+                          id="fakultas"
+                          name="fakultas"
+                          required=""
+                        >
+                          <option disabled="" selected="" value="">
+                            Pilih fakultas
+                          </option>
+                          <option class="hover:bg-[#680a18] hover:text-white" value="Fakultas Ekonomi dan Bisnis">
+                            Fakultas Ekonomi dan Bisnis
+                          </option>
+                          <option class="hover:bg-[#680a18] hover:text-white" value="Fakultas Hukum">
+                            Fakultas Hukum
+                          </option>
+                          <option class="hover:bg-[#680a18] hover:text-white" value="Fakultas Islam Nusantara">
+                            Fakultas Islam Nusantara
+                          </option>
+                          <option class="hover:bg-[#680a18] hover:text-white" value="Fakultas Ilmu Sosial">
+                            Fakultas Ilmu Sosial
+                          </option>
+                          <option class="hover:bg-[#680a18] hover:text-white" value="Fakultas Teknik dan Ilmu Komputer">
+                            Fakultas Teknik dan Ilmu Komputer
+                          </option>
+                          <option class="hover:bg-[#680a18] hover:text-white" value="Fakultas Keguruan dan Ilmu Pendidikan">
+                            Fakultas Keguruan dan Ilmu Pendidikan
+                          </option>
+                        </select>
+                        <span
+                          class="material-symbols-outlined absolute right-3 top-3.5 text-secondary pointer-events-none text-[20px]"
+                          >expand_more</span
+                        >
+                      </div>
+                    </div>
+
+                    <!-- Field 6: Program Studi -->
+                    <div class="flex flex-col">
+                      <label
+                        class="font-label-md text-label-md text-on-surface mb-1 flex items-center"
+                        for="prodi"
+                      >
+                        Program Studi <span class="text-error ml-0.5">*</span>
+                      </label>
+                      <div class="relative">
+                        <select
+                          class="w-full bg-white text-on-surface font-body-md text-body-md p-3 rounded-lg border border-primary/30 focus:bg-white focus:border-[#680a18] focus:outline-none focus:ring-2 focus:ring-[#680a18]/20 hover:border-[#680a18] cursor-pointer appearance-none transition-all duration-150 pr-10"
+                          id="prodi"
+                          name="prodi"
+                          required=""
+                        >
+                          <option disabled="" selected="" value="">
+                            Pilih program studi
+                          </option>
+                          <option value="S1 Teknik Informatika">
+                            S1 Teknik Informatika
+                          </option>
+                          <option value="S1 Sistem Informasi">
+                            S1 Sistem Informasi
+                          </option>
+                          <option value="S1 Teknologi Agroindustri">
+                            S1 Teknologi Agroindustri
+                          </option>
+                          <option value="S1 Akuntansi">S1 Akuntansi</option>
+                          <option value="S1 Ekonomi Syariah">S1 Ekonomi Syariah</option>
+                          <option
+                            value="S1 Hukum Keluarga Islam (Ahwal Syakhshiyyah)"
+                          >
+                            S1 Hukum Keluarga Islam (Ahwal Syakhshiyyah)
+                          </option>
+                          <option value="S1 Ilmu Hukum">
+                            S1 Ilmu Hukum
+                          </option>
+                          <option value="S1 Sejarah Peradaban Islam">
+                            S1 Sejarah Peradaban Islam
+                          </option>
+                          <option value="S1 Tadris Bahasa Inggris">
+                            S1 Tadris Bahasa Inggris
+                          </option>
+                          <option value="S1 Pendidikan Agama Islam">
+                            S1 Pendidikan Agama Islam
+                          </option>
+                          <option value="S1 Pendidikan Guru Madrasah Ibtidaiyah">
+                            S1 Pendidikan Guru Madrasah Ibtidaiyah
+                          </option>
+                          <option value="S1 Psikologi">S1 Psikologi</option>
+                          <option value="S1 Sosiologi">S1 Sosiologi</option>
+                        </select>
+                        <span
+                          class="material-symbols-outlined absolute right-3 top-3.5 text-secondary pointer-events-none text-[20px]"
+                          >expand_more</span
+                        >
+                      </div>
+                    </div>
+
+                    <!-- Field 7: Pilihan Kampus -->
+                    <div class="flex flex-col">
+                      <label
+                        class="font-label-md text-label-md text-on-surface mb-1 flex items-center"
+                        for="kampus"
+                      >
+                        Pilihan Kampus <span class="text-error ml-0.5">*</span>
+                      </label>
+                      <div class="relative">
+                        <select
+                          class="w-full bg-white text-on-surface font-body-md text-body-md p-3 rounded-lg border border-primary/30 focus:bg-white focus:border-[#680a18] focus:outline-none focus:ring-2 focus:ring-[#680a18]/20 hover:border-[#680a18] cursor-pointer appearance-none transition-all duration-150 pr-10"
+                          id="kampus"
+                          name="kampus"
+                          required=""
+                        >
+                          <option disabled="" selected="" value="">
+                            Pilih kampus
+                          </option>
+                          <option value="Kampus A - UNUSIA Kramat, Jakarta Pusat">
+                            Kampus A - Matraman, Jakarta Pusat
+                          </option>
+                          <option value="Kampus B - UNUSIA Kemang, Bogor">
+                            Kampus B - Kemang, Bogor
+                          </option>
+                        </select>
+                        <span
+                          class="material-symbols-outlined absolute right-3 top-3.5 text-secondary pointer-events-none text-[20px]"
+                          >expand_more</span
+                        >
+                      </div>
+                    </div>
+
+                    <!-- Field 8: Unit Perguruan / Aliran Silat -->
+                    <div class="flex flex-col">
+                      <label
+                        class="font-label-md text-label-md text-on-surface mb-1 flex items-center"
+                        for="unit_perguruan"
+                      >
+                        Unit Perguruan / Peminatan
+                        <span class="text-error ml-0.5">*</span>
+                      </label>
+                      <div class="relative">
+                        <select
+                          class="w-full bg-white text-on-surface font-body-md text-body-md p-3 rounded-lg border border-primary/30 focus:bg-white focus:border-[#680a18] focus:outline-none focus:ring-2 focus:ring-[#680a18]/20 hover:border-[#680a18] cursor-pointer appearance-none transition-all duration-150 pr-10"
+                          id="unit_perguruan"
+                          name="unit_perguruan"
+                          required=""
+                        >
+                          <option disabled="" selected="" value="">
+                            Pilih unit perguruan
+                          </option>
+                          <option value="Pagar Nusa UNUSIA">PSNU Pagarnusa Unusia</option>
+                          <option value="Keatletan">
+                            Keatletan
+                          </option>
+                        </select>
+                        <span
+                          class="material-symbols-outlined absolute right-3 top-3.5 text-secondary pointer-events-none text-[20px]"
+                          >expand_more</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                 <!-- SECTION 2.5: BIAYA PENDAFTARAN & BUKTI PEMBAYARAN -->
+                 <div class="bg-surface-container-low/40 p-4 md:p-5 rounded-lg border border-primary/10">
+                   <h3 class="font-label-lg text-label-lg text-primary uppercase tracking-wider mb-4 flex items-center gap-2 border-b border-primary/10 pb-2">
+                     <span class="material-symbols-outlined text-[18px]">payment</span>
+                     <span>Biaya Pendaftaran</span>
+                   </h3>
+
+                   <!-- Info Kuota Gratis -->
+                   <div id="quotaInfoBox" class="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-center space-y-1 mb-4">
+                     <p id="quotaInfoText" class="text-xs font-bold text-emerald-800">
+                       Memeriksa sisa kuota pendaftaran...
+                     </p>
+                     <p class="text-[11px] text-emerald-600 italic">
+                       Anda tidak perlu melakukan pembayaran atau mengunggah bukti bayar selama kuota gratis masih ada.
+                     </p>
+                   </div>
+
+                   <!-- Info Rekening (Jika Kuota Habis) -->
+                   <div id="quotaExpiredBox" class="hidden p-3.5 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-xs text-slate-700 space-y-1.5 mb-4">
+                     <div class="flex items-center justify-between">
+                       <span class="font-bold text-amber-900">⚠️ Kuota Gratis Habis - Pembayaran Diperlukan:</span>
+                       <span class="font-bold text-amber-800 bg-amber-100 px-2 py-0.5 rounded text-[11px]">E-Wallet DANA</span>
+                     </div>
+                   </div>
+
+                    <!-- Biaya Info Card -->
+                    <div id="biayaCardBox" class="hidden bg-white rounded-lg p-4 mb-4 border-l-4 border-[#E2B857]">
+                      <div class="flex items-center justify-between">
+                        <div>
+                          <p class="font-body-sm text-body-sm text-on-surface/80">Biaya Pendaftaran</p>
+                          <p id="quotaBadge" class="font-headline-sm text-headline-sm text-[#680a18] font-bold mt-1">MEMERIKSA...</p>
+                        </div>
+                         <div class="text-right">
+                           <p class="font-label-md text-label-md text-secondary uppercase mb-1">No. Dana</p>
+                           <div class="flex items-center gap-2 justify-end">
+                             <div class="flex flex-col items-end">
+                               <p class="font-body-md text-body-md text-on-surface font-bold">085719625613</p>
+                               <p class="font-body-sm text-[11px] text-secondary">A/N Erina Safitri</p>
+                             </div>
+                             <button
+                               type="button"
+                               class="p-2 rounded bg-primary/10 hover:bg-primary/20 text-primary transition-colors"
+                               onclick="copyToClipboard('085719625613')"
+                               title="Salin nomor Dana"
+                             >
+                               <span class="material-symbols-outlined text-[18px]">content_copy</span>
+                             </button>
+                           </div>
+                         </div>
+                      </div>
+                    </div>
+
+                   <!-- Upload Bukti Pembayaran (Hidden by default) -->
+                   <div id="paymentUploadBox" class="hidden flex flex-col">
+                     <label class="font-label-md text-label-md text-on-surface mb-1 flex items-center">
+                       Bukti Pembayaran <span class="text-error ml-0.5">*</span>
+                     </label>
+                     <div
+                       class="border-2 border-dashed border-primary/40 rounded-lg p-4 bg-white text-center hover:bg-[#F5EFF0] transition-colors cursor-pointer relative flex flex-col items-center justify-center"
+                       onclick="document.getElementById('file_payment').click()"
+                     >
+                       <input
+                         accept="image/*"
+                         class="hidden"
+                         id="file_payment"
+                         name="file_payment"
+                         onchange="updateFileName(this, 'payment_preview')"
+                         type="file"
+                       />
+                       <span
+                         class="material-symbols-outlined text-primary text-[28px] mb-1"
+                         >cloud_upload</span
+                       >
+                       <p class="font-label-sm text-label-sm text-on-surface">
+                         Upload bukti transfer/pembayaran
+                       </p>
+                       <p class="font-body-sm text-[12px] text-secondary italic mt-1">
+                         Maksimal 5MB (JPG/PNG)
+                       </p>
+                       <div
+                         class="mt-2.5 inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-high rounded text-xs text-primary font-mono font-bold"
+                         id="payment_preview"
+                       >
+                         <span class="material-symbols-outlined text-[14px]">check_circle</span>
+                         <span>[Belum ada file]</span>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+
+                <!-- SECTION 3: UNTUK BUKTI SYARAT (UPLOAD) -->
+                <div class="bg-surface-container-low/40 p-4 md:p-5 rounded-lg border border-primary/10">
+                  <h3 class="font-label-lg text-label-lg text-primary uppercase tracking-wider mb-4 flex items-center gap-2 border-b border-primary/10 pb-2">
+                    <span class="material-symbols-outlined text-[18px]">cloud_upload</span>
+                    <span>Lampiran Berkas</span>
+                  </h3>
+
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Field 9: Bukti Follow Instagram -->
+                    <div class="flex flex-col">
+                      <div class="flex items-center justify-between mb-1">
+                        <label class="font-label-md text-label-md text-on-surface flex items-center">
+                          Bukti Follow IG <span class="text-error ml-0.5">*</span>
+                        </label>
+                        <a
+                          href="https://instagram.com/ukm.pencaksilatunusia"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="text-xs text-primary font-bold hover:underline flex items-center gap-0.5"
+                          onclick="event.stopPropagation();"
+                        >
+                          <span>@ukm.pencaksilatunusia</span>
+                          <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+                        </a>
+                      </div>
+                      <div
+                        class="border-2 border-dashed border-primary/40 rounded-lg p-4 bg-white text-center hover:bg-[#F5EFF0] transition-colors cursor-pointer relative h-full flex flex-col items-center justify-center"
+                        onclick="document.getElementById('file_ig').click()"
+                      >
+                        <input
+                          accept="image/*"
+                          class="hidden"
+                          id="file_ig"
+                          name="file_ig"
+                          onchange="updateFileName(this, 'ig_preview')"
+                          type="file"
+                        />
+                        <span
+                          class="material-symbols-outlined text-primary text-[28px] mb-1"
+                          >cloud_upload</span
+                        >
+                        <p class="font-label-sm text-label-sm text-on-surface">
+                          Upload screenshot Instagram
+                        </p>
+                        <p
+                          class="font-body-sm text-[12px] text-secondary italic mt-1"
+                        >
+                          Maksimal 5MB (JPG/PNG)
+                        </p>
+                        <div
+                          class="mt-2.5 inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-high rounded text-xs text-primary font-mono font-bold"
+                          id="ig_preview"
+                        >
+                          <span class="material-symbols-outlined text-[14px]"
+                            >check_circle</span
+                          >
+                          <span>[Belum ada file]</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Field 10: Bukti Follow TikTok -->
+                    <div class="flex flex-col">
+                      <div class="flex items-center justify-between mb-1">
+                        <label class="font-label-md text-label-md text-on-surface flex items-center">
+                          Bukti Follow TT <span class="text-error ml-0.5">*</span>
+                        </label>
+                        <a
+                          href="https://tiktok.com/@ukm.pencaksilatunusia"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="text-xs text-primary font-bold hover:underline flex items-center gap-0.5"
+                          onclick="event.stopPropagation();"
+                        >
+                          <span>@ukm.pencaksilatunusia</span>
+                          <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+                        </a>
+                      </div>
+                      <div
+                        class="border-2 border-dashed border-primary/40 rounded-lg p-4 bg-white text-center hover:bg-[#F5EFF0] transition-colors cursor-pointer relative h-full flex flex-col items-center justify-center"
+                        onclick="document.getElementById('file_tiktok').click()"
+                      >
+                        <input
+                          accept="image/*"
+                          class="hidden"
+                          id="file_tiktok"
+                          name="file_tiktok"
+                          onchange="updateFileName(this, 'tiktok_preview')"
+                          type="file"
+                        />
+                        <span
+                          class="material-symbols-outlined text-primary text-[28px] mb-1"
+                          >cloud_upload</span
+                        >
+                        <p class="font-label-sm text-label-sm text-on-surface">
+                          Upload screenshot TikTok
+                        </p>
+                        <p
+                          class="font-body-sm text-[12px] text-secondary italic mt-1"
+                        >
+                          Maksimal 5MB (JPG/PNG)
+                        </p>
+                        <div
+                          class="mt-2.5 inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-high rounded text-xs text-primary font-mono font-bold"
+                          id="tiktok_preview"
+                        >
+                          <span class="material-symbols-outlined text-[14px]"
+                            >check_circle</span
+                          >
+                          <span>[Belum ada file]</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- SECTION 4: KOMITMEN & SUBMIT -->
+                <div class="flex flex-col gap-4">
+                  <!-- Sumpah / Janji Pesilat Checkbox Callout -->
+                  <div
+                    class="p-4 bg-surface-container-low rounded-lg border-l-4 border-primary text-xs leading-relaxed text-on-surface"
+                  >
+                    <label class="flex items-start gap-3 cursor-pointer">
+                      <input
+                        class="mt-0.5 accent-primary h-4 w-4 rounded shrink-0"
+                        required=""
+                        type="checkbox"
+                      />
+                      <span class="font-body-sm text-body-sm">
+                        Saya berminat dan berkomitmen untuk mengikuti kegiatan latihan serta mematuhi seluruh peraturan UKM Pencak Silat Unusia.
+                      </span>
+                    </label>
+                  </div>
+
+                  <!-- Tombol Registrasi (Primary Action) -->
+                  <button
+                    class="w-full bg-[#680a18] text-on-primary font-label-lg text-label-lg uppercase tracking-wider py-4 rounded-lg shadow-md border border-[#4a0510] transition-all duration-200 cursor-pointer flex items-center justify-center gap-2 hover:bg-[#44000a] hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(104,10,24,0.45)] active:translate-y-0 active:shadow-md active:scale-[0.99]"
+                    type="submit"
+                  >
+                    <span class="material-symbols-outlined text-[20px]"
+                      >how_to_reg</span
+                    >
+                    <span>DAFTAR SEKARANG</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- SUCCESS MODAL - DETAILED (Modal Popup) -->
+        <div id="successModal" class="hidden fixed inset-0 bg-slate-900/50 backdrop-blur-sm flex items-center justify-center p-4 z-50">
+          <div class="bg-white rounded-2xl p-6 md:p-8 max-w-sm w-full text-center shadow-2xl space-y-6">
+            <!-- Success Icon -->
+            <div class="w-20 h-20 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
+              <span class="material-symbols-outlined text-[48px]" style="font-variation-settings: &quot;FILL&quot; 1">task_alt</span>
+            </div>
+
+            <!-- Success Title & Message -->
+            <div class="space-y-2">
+              <h2 class="text-2xl font-bold text-slate-900">Pendaftaran Berhasil!</h2>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Data pendaftaran Anda telah kami terima. Terima kasih telah bergabung dengan UKM Pencak Silat UNUSIA!
+              </p>
+            </div>
+
+            <!-- Info Box -->
+            <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-4 text-left space-y-2">
+              <p class="text-sm font-semibold text-emerald-900">
+                <span class="material-symbols-outlined text-[18px] align-middle mr-1">check_circle</span>
+                Langkah Selanjutnya:
+              </p>
+              <ul class="text-xs text-emerald-800 space-y-1.5 ml-6">
+                <li class="list-disc">Admin akan menghubungi Anda via WhatsApp</li>
+                <li class="list-disc">Verifikasi data dan informasi lebih lanjut</li>
+                <li class="list-disc">Bergabung ke group WhatsApp eksklusif</li>
+              </ul>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="space-y-3">
+              <!-- WhatsApp Button -->
+              <a href="https://chat.whatsapp.com/YOUR_GROUP_LINK" target="_blank" class="w-full flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347m-5.421 7.461c-1.92 0-3.805-.516-5.459-1.493l-.391-.231-4.06 1.065 1.084-3.958-.255-.405c-1.073-1.708-1.64-3.69-1.64-5.719 0-5.83 4.743-10.573 10.576-10.573 2.824 0 5.48 1.1 7.477 3.098 1.997 1.998 3.095 4.654 3.095 7.479 0 5.832-4.742 10.576-10.577 10.576m0-21.843c-6.52 0-11.83 5.31-11.83 11.83 0 2.083.541 4.116 1.571 5.905l-1.669 6.096 6.236-1.636c1.729.943 3.684 1.442 5.692 1.442 6.52 0 11.83-5.31 11.83-11.83 0-3.16-1.23-6.13-3.463-8.363s-5.203-3.464-8.367-3.464"/>
+                </svg>
+                Bergabung ke Group WhatsApp
+              </a>
+
+              <!-- Back Button -->
+              <button onclick="backToForm()" class="w-full bg-slate-200 hover:bg-slate-300 text-slate-900 font-semibold py-3 px-4 rounded-lg transition-colors duration-200">
+                Kembali ke Form
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- SUCCESS TOAST NOTIFICATION (Client-side interactive feedback) -->
+        <div
+          class="fixed top-20 inset-x-4 max-w-sm mx-auto z-50 transform -translate-y-28 opacity-0 transition-all duration-300 pointer-events-none bg-primary text-on-primary p-4 rounded-lg shadow-2xl border border-primary-fixed flex items-center gap-3"
+          id="toast-success"
+        >
+          <span class="material-symbols-outlined text-green-400 text-[28px]"
+            >verified</span
+          >
+          <div class="flex flex-col leading-tight">
+            <span class="font-label-md text-label-md"
+              >Pendaftaran Diterima!</span
+            >
+            <span class="font-body-sm text-body-sm opacity-90"
+              >Admin UKM akan menghubungi nomor WA Anda untuk proses verifikasi
+              lanjutan.</span
+            >
+          </div>
+        </div>
+        <!-- FOOTER (Simpel, Rapih & Informatif) -->
+        <footer class="w-full bg-[#44000a] text-white border-t border-primary-container py-4 px-4 md:px-8 mt-6 relative overflow-hidden">
+          <!-- Blueprint Grid Background -->
+          <div
+            class="absolute inset-0 pointer-events-none opacity-[0.05]"
+            style="
+              background-image:
+                linear-gradient(to right, #ffffff 1px, transparent 1px),
+                linear-gradient(to bottom, #ffffff 1px, transparent 1px);
+              background-size: 32px 32px;
+            "
+          ></div>
+
+          <!-- Footer Content -->
+          <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3 relative z-10">
+            <!-- Brand Info -->
+            <div class="flex flex-col text-center md:text-left">
+              <h3 class="font-headline-sm text-base uppercase tracking-wider text-white font-bold">UKM PENCAK SILAT UNUSIA</h3>
+            </div>
+
+            <!-- Contact & Social Links -->
+            <div class="flex flex-wrap items-center justify-center md:justify-end gap-6 text-xs text-white/80">
+              <!-- WhatsApp Contact Person -->
+              <a href="https://wa.me/6285814698694" target="_blank" class="flex items-center gap-1.5 hover:text-white transition-colors md:gap-1.5">
+                <svg class="w-4 h-4 fill-[#E2B857]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347m-5.421 7.461c-1.92 0-3.805-.516-5.459-1.493l-.391-.231-4.06 1.065 1.084-3.958-.255-.405c-1.073-1.708-1.64-3.69-1.64-5.719 0-5.83 4.743-10.573 10.576-10.573 2.824 0 5.48 1.1 7.477 3.098 1.997 1.998 3.095 4.654 3.095 7.479 0 5.832-4.742 10.576-10.577 10.576m0-21.843c-6.52 0-11.83 5.31-11.83 11.83 0 2.083.541 4.116 1.571 5.905l-1.669 6.096 6.236-1.636c1.729.943 3.684 1.442 5.692 1.442 6.52 0 11.83-5.31 11.83-11.83 0-3.16-1.23-6.13-3.463-8.363s-5.203-3.464-8.367-3.464"/>
+                </svg>
+                <span class="hidden md:inline">+62 858-1469-8694</span>
+              </a>
+              <!-- Instagram -->
+              <a href="https://instagram.com/ukm.pencaksilatunusia" target="_blank" class="flex items-center gap-1.5 hover:text-white transition-colors md:gap-1.5">
+                <svg class="w-4 h-4 fill-[#E2B857]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+                <span class="hidden md:inline">@ukm.pencaksilatunusia</span>
+              </a>
+              <!-- TikTok -->
+              <a href="https://tiktok.com/@ukm.pencaksilatunusia" target="_blank" class="flex items-center gap-1.5 hover:text-white transition-colors md:gap-1.5">
+                <svg class="w-4 h-4 fill-[#E2B857]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.98-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.06-1.27 1.79-.19.82.02 1.7.53 2.37.52.71 1.38 1.16 2.25 1.17 1.09.05 2.17-.46 2.77-1.36.42-.62.61-1.38.61-2.13.01-4.52.01-9.04.01-13.56z"/>
+                </svg>
+                <span class="hidden md:inline">@ukm.pencaksilatunusia</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Bottom Bar -->
+          <div class="max-w-6xl mx-auto border-t border-white/10 mt-3 pt-3 text-center">
+            <p class="font-body-sm text-[11px] text-white/50">
+              © 2025 UKM Pencak Silat UNUSIA. All rights reserved.
+            </p>
+          </div>
+        </footer>
+        <script>
+          // Google Apps Script URL
+          const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzxVQBHuFZmWJWBsiSBEgggwopW89W4QPl6TbMb3OWkpi8gFIXuIz2eJVri7V093IHw/exec";
+          const MAX_KUOTA = 10;
+
+          // Fungsi Pengecekan Kuota Otomatis & Live Update
+          async function checkKuotaPendaftar() {
+            const quotaPromoText = document.getElementById("quotaPromoText");
+            const quotaInfoText = document.getElementById("quotaInfoText");
+            const quotaInfoBox = document.getElementById("quotaInfoBox");
+            const quotaExpiredBox = document.getElementById("quotaExpiredBox");
+            const quotaBadge = document.getElementById("quotaBadge");
+            const paymentUploadBox = document.getElementById("paymentUploadBox");
+            const filePaymentInput = document.getElementById("file_payment");
+
+            try {
+              const response = await fetch(SCRIPT_URL);
+              if (!response.ok) throw new Error("Gagal mengambil data");
+
+              const data = await response.json();
+              const totalPendaftar = parseInt(data.totalPendaftar) || 0;
+              const sisaKuota = Math.max(0, MAX_KUOTA - totalPendaftar);
+
+              if (sisaKuota > 0) {
+                // TAMPILAN KUOTA MASIH TERSEDIA
+                quotaPromoText.innerHTML = `<span class="font-bold text-emerald-800"> Pendaftaran Gratis!</span> Sisa <strong class="text-emerald-900 bg-emerald-200/60 px-1.5 py-0.5 rounded font-black">${sisaKuota} dari ${MAX_KUOTA} slot</strong> pendaftaran gratis. Selesaikan pendaftaran sekarang!`;
+                
+                quotaInfoText.innerHTML = ` Sisa Slot Gratis: <strong class="text-sm font-extrabold text-emerald-900">${sisaKuota} / ${MAX_KUOTA} Orang</strong>`;
+
+                quotaInfoBox.classList.remove("hidden");
+                quotaExpiredBox.classList.add("hidden");
+                paymentUploadBox.classList.add("hidden");
+
+                 filePaymentInput.required = false;
+                 quotaBadge.textContent = `GRATIS (${sisaKuota} SLOT)`;
+                  quotaBadge.className = "font-headline-sm text-headline-sm text-emerald-700 font-bold mt-1 animate-pulse";
+                  
+                  // STYLE POP-UP HIJAU (GRATIS)
+                  const quotaPromoBox = document.getElementById("quotaPromoBox");
+                  const quotaIconBox = document.getElementById("quotaIconBox");
+                  if (quotaPromoBox && quotaIconBox) {
+                    quotaPromoBox.className = "mb-2 p-5 md:p-6 rounded-lg bg-gradient-to-r from-emerald-50/70 via-emerald-50/50 to-teal-50/40 border-2 border-emerald-700/25 backdrop-blur-md flex items-center gap-4 shadow-md transition-all duration-300";
+                    quotaIconBox.innerHTML = '<span class="material-symbols-outlined text-emerald-700 text-[28px]" style="font-variation-settings: &quot;FILL&quot; 1">check_circle</span>';
+                  }
+                  
+                  // SEMBUNYIKAN CARD BIAYA PENDAFTARAN saat kuota masih ada
+                  const biayaCardBox = document.getElementById("biayaCardBox");
+                  if (biayaCardBox) {
+                    biayaCardBox.classList.add("hidden");
+                  }
+                } else {
+                  // TAMPILAN KUOTA HABIS
+                  quotaPromoText.innerHTML = `<span class="font-bold text-red-900">⚠️ Kuota Gratis Habis!</span> Pendaftaran selanjutnya dikenakan biaya <strong>Rp10.000</strong>`;
+
+                  quotaInfoBox.classList.add("hidden");
+                  quotaExpiredBox.classList.remove("hidden");
+                  paymentUploadBox.classList.remove("hidden");
+
+                  filePaymentInput.required = true;
+                  quotaBadge.textContent = "Rp10.000";
+                  quotaBadge.className = "font-headline-sm text-headline-sm text-rose-700 font-bold mt-1";
+                  
+                  // STYLE POP-UP MERAH TUA OPASITI PUDAR (HABIS) - HILANGKAN ICON
+                  const quotaPromoBox2 = document.getElementById("quotaPromoBox");
+                  const quotaIconBox2 = document.getElementById("quotaIconBox");
+                  if (quotaPromoBox2 && quotaIconBox2) {
+                    quotaPromoBox2.className = "mb-2 p-5 md:p-6 rounded-lg bg-gradient-to-r from-red-50/60 via-red-50/40 to-rose-50/30 border-2 border-red-900/20 backdrop-blur-md flex items-center gap-4 shadow-md transition-all duration-300";
+                    quotaIconBox2.innerHTML = ''; // Hilangkan icon
+                  }
+                  
+                  // TAMPILKAN CARD BIAYA PENDAFTARAN saat kuota habis
+                  const biayaCardBox2 = document.getElementById("biayaCardBox");
+                  if (biayaCardBox2) {
+                    biayaCardBox2.classList.remove("hidden");
+                  }
+              }
+            } catch (error) {
+              // Fallback Tampilan bila Fetch Terkendala
+              console.error("Error checking quota:", error);
+              quotaPromoText.innerHTML = `<span class="font-bold text-red-900"> Promo Pendaftaran Gratis</span> <span class="text-slate-600">Tersedia untuk</span> <strong class="text-red-800 bg-red-200/50 px-2 py-1 rounded-lg font-bold">10 pendaftar pertama</strong>`;
+              quotaInfoText.textContent = "Kuota pendaftaran gratis terbatas untuk 10 orang pertama.";
+              quotaBadge.textContent = "GRATIS";
+              filePaymentInput.required = false;
+            }
+          }
+
+          // Jalankan Pengecekan Saat Load & Auto-Refresh Setiap 5 Detik (Live Update)
+          document.addEventListener("DOMContentLoaded", () => {
+            checkKuotaPendaftar();
+            setInterval(checkKuotaPendaftar, 5000);
+          });
+
+          function updateFileName(input, previewId) {
+            if (input.files && input.files[0]) {
+              var file = input.files[0];
+              var sizeMB = (file.size / (1024 * 1024)).toFixed(1);
+              var preview = document.getElementById(previewId);
+              if (preview) {
+                preview.innerHTML =
+                  '<span class="material-symbols-outlined text-[14px]">check_circle</span> <span>' +
+                  file.name +
+                  " (" +
+                  sizeMB +
+                  " MB) ✓</span>";
+                preview.className =
+                  "mt-2.5 inline-flex items-center gap-1.5 px-2.5 py-1 bg-green-100 text-green-900 rounded text-xs font-mono font-bold";
+              }
+            }
+          }
+
+          function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(function () {
+              alert('Nomor Dana berhasil disalin: ' + text);
+            }).catch(function (err) {
+              console.error('Gagal menyalin:', err);
+            });
+          }
+
+          // Konversi File ke Base64
+          function readFileAsBase64(file) {
+            return new Promise((resolve, reject) => {
+              if (!file) { 
+                resolve(null); 
+                return; 
+              }
+              const reader = new FileReader();
+              reader.onload = () => {
+                const base64String = reader.result.split(',')[1];
+                resolve({ 
+                  filename: file.name, 
+                  mimeType: file.type, 
+                  data: base64String 
+                });
+              };
+              reader.onerror = error => reject(error);
+              reader.readAsDataURL(file);
+            });
+          }
+
+          // Handle Form Submission
+          document.getElementById("pendaftaran-form").addEventListener("submit", async function(e) {
+            e.preventDefault();
+
+            const form = document.getElementById("pendaftaran-form");
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+            
+            // Disable submit button dan tampilkan loading
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="material-symbols-outlined animate-spin">hourglass_bottom</span><span>Mengirim...</span>';
+
+            try {
+              // Ambil file dari input
+              const filePaymentInput = document.getElementById("file_payment").files[0];
+              const fileIgInput = document.getElementById("file_ig").files[0];
+              const fileTiktokInput = document.getElementById("file_tiktok").files[0];
+
+              // Konversi file ke Base64
+              const filePaymentData = await readFileAsBase64(filePaymentInput);
+              const fileIgData = await readFileAsBase64(fileIgInput);
+              const fileTiktokData = await readFileAsBase64(fileTiktokInput);
+
+              // Siapkan data form
+              const formData = {
+                email: document.getElementById("email").value,
+                nama_lengkap: document.getElementById("nama_lengkap").value,
+                nim: document.getElementById("nim").value,
+                whatsapp: document.getElementById("whatsapp").value,
+                fakultas: document.getElementById("fakultas").value,
+                prodi: document.getElementById("prodi").value,
+                kampus: document.getElementById("kampus").value,
+                unit_perguruan: document.getElementById("unit_perguruan").value,
+                file_payment: filePaymentData,
+                file_ig: fileIgData,
+                file_tiktok: fileTiktokData,
+                timestamp: new Date().toLocaleString('id-ID')
+              };
+
+              // Kirim ke Google Apps Script
+              const response = await fetch(SCRIPT_URL, {
+                method: "POST",
+                body: JSON.stringify(formData)
+              });
+
+              if (!response.ok) {
+                throw new Error("Gagal mengirim data ke server");
+              }
+
+              // Tampilkan success toast
+              showSuccessToast();
+              
+              // Reset form
+              form.reset();
+              document.getElementById("payment_preview").innerHTML = '<span class="material-symbols-outlined text-[14px]">check_circle</span><span>[Belum ada file]</span>';
+              document.getElementById("payment_preview").className = "mt-2.5 inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-high rounded text-xs text-primary font-mono font-bold";
+              document.getElementById("ig_preview").innerHTML = '<span class="material-symbols-outlined text-[14px]">check_circle</span><span>[Belum ada file]</span>';
+              document.getElementById("ig_preview").className = "mt-2.5 inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-high rounded text-xs text-primary font-mono font-bold";
+              document.getElementById("tiktok_preview").innerHTML = '<span class="material-symbols-outlined text-[14px]">check_circle</span><span>[Belum ada file]</span>';
+              document.getElementById("tiktok_preview").className = "mt-2.5 inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-high rounded text-xs text-primary font-mono font-bold";
+
+              // Check kuota terbaru setelah submit
+              setTimeout(() => {
+                checkKuotaPendaftar();
+              }, 1000);
+
+              // Kembalikan tombol ke state normal setelah delay
+              setTimeout(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+              }, 2000);
+
+            } catch (error) {
+              console.error("Error:", error);
+              alert("Terjadi kesalahan saat mengirim pendaftaran. Silakan coba lagi.\n\nError: " + error.message);
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = originalBtnText;
+            }
+          });
+
+          function showSuccessToast() {
+            var toast = document.getElementById("toast-success");
+            if (toast) {
+              toast.classList.remove(
+                "-translate-y-28",
+                "opacity-0",
+                "pointer-events-none",
+              );
+              toast.classList.add("translate-y-0", "opacity-100");
+              setTimeout(function () {
+                toast.classList.add(
+                  "-translate-y-28",
+                  "opacity-0",
+                  "pointer-events-none",
+                );
+                toast.classList.remove("translate-y-0", "opacity-100");
+              }, 4000);
+            }
+          }
+        
+          function showSuccessToast() {
+            var successModal = document.getElementById("successModal");
+            if (successModal) {
+              successModal.classList.remove("hidden");
+            }
+          }
+
+          function closeSuccessModal() {
+            var successModal = document.getElementById("successModal");
+            if (successModal) {
+              successModal.classList.add("hidden");
+            }
+          }
+          function showSuccessPage() {
+            // Redirect ke halaman sukses
+            window.location.href = "success.html";
+          }
+
+          function backToForm() {
+            // Tampilkan form container kembali (fallback jika dipanggil dari halaman ini)
+            const formSection = document.querySelector("section.w-full.px-4.md\\:px-gutter");
+            if (formSection) formSection.classList.remove("hidden");
+            const successPage = document.getElementById("successPage");
+            if (successPage) successPage.classList.add("hidden");
+          }
+
+          function showSuccessToast() {
+            showSuccessPage();
+          }
+
+          function closeSuccessModal() {
+            backToForm();
+          }</script>
+      </div>
+    </body>
+  </html>
+
+
+
+
+
