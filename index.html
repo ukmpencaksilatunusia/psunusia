@@ -285,7 +285,8 @@
           </div>
         </section>
 
-          <!-- KUOTA GRATIS LIVE UPDATE SECTION -->
+          <!-- KUOTA GRATIS LIVE UPDATE SECTION (LAMA - DIKOMENTARI) -->
+          <!--
           <div class="w-full px-4 md:px-gutter max-w-4xl mx-auto py-2 relative z-20">
             <div id="quotaPromoBox" class="mb-2 p-5 md:p-6 rounded-lg bg-gradient-to-r from-emerald-50/70 via-emerald-50/50 to-teal-50/40 border-2 border-emerald-700/25 backdrop-blur-md flex items-center gap-4 shadow-md transition-all duration-300">
               <div id="quotaIconBox" class="flex-shrink-0">
@@ -293,6 +294,19 @@
               </div>
               <div id="quotaPromoText" class="text-base leading-relaxed text-slate-800 font-medium flex-grow">
                 Memeriksa sisa kuota pendaftar gratis...
+              </div>
+            </div>
+          </div>
+          -->
+
+          <!-- PENDAFTARAN GRATIS - STATIC DISPLAY (BARU) -->
+          <div class="w-full px-4 md:px-gutter max-w-4xl mx-auto py-2 relative z-20">
+            <div class="mb-2 p-5 md:p-6 rounded-lg bg-gradient-to-r from-emerald-50/70 via-emerald-50/50 to-teal-50/40 border-2 border-emerald-700/25 backdrop-blur-md flex items-center gap-4 shadow-md">
+              <div class="flex-shrink-0">
+                <span class="material-symbols-outlined text-emerald-700 text-[28px]" style="font-variation-settings: &quot;FILL&quot; 1">check_circle</span>
+              </div>
+              <div class="text-base leading-relaxed text-slate-800 font-medium flex-grow">
+                <span class="font-bold text-emerald-800">PENDAFTARAN GRATIS</span> — Gratis Selama PKKMB Unusia Berlangsung
               </div>
             </div>
           </div>
@@ -664,14 +678,14 @@
                   </div>
                 </div>
 
-                 <!-- SECTION 2.5: BIAYA PENDAFTARAN & BUKTI PEMBAYARAN -->
+                 <!-- SECTION 2.5: BIAYA PENDAFTARAN & BUKTI PEMBAYARAN (LAMA - DIKOMENTARI) -->
+                 <!--
                  <div class="bg-surface-container-low/40 p-4 md:p-5 rounded-lg border border-primary/10">
                    <h3 class="font-label-lg text-label-lg text-primary uppercase tracking-wider mb-4 flex items-center gap-2 border-b border-primary/10 pb-2">
                      <span class="material-symbols-outlined text-[18px]">payment</span>
                      <span>Biaya Pendaftaran</span>
                    </h3>
 
-                   <!-- Info Kuota Gratis -->
                    <div id="quotaInfoBox" class="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-center space-y-1 mb-4">
                      <p id="quotaInfoText" class="text-xs font-bold text-emerald-800">
                        Memeriksa sisa kuota pendaftaran...
@@ -681,7 +695,6 @@
                      </p>
                    </div>
 
-                   <!-- Info Rekening (Jika Kuota Habis) -->
                    <div id="quotaExpiredBox" class="hidden p-3.5 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-xs text-slate-700 space-y-1.5 mb-4">
                      <div class="flex items-center justify-between">
                        <span class="font-bold text-amber-900">⚠️ Kuota Gratis Habis - Pembayaran Diperlukan:</span>
@@ -689,7 +702,6 @@
                      </div>
                    </div>
 
-                    <!-- Biaya Info Card -->
                     <div id="biayaCardBox" class="hidden bg-white rounded-lg p-4 mb-4 border-l-4 border-[#E2B857]">
                       <div class="flex items-center justify-between">
                         <div>
@@ -716,7 +728,6 @@
                       </div>
                     </div>
 
-                   <!-- Upload Bukti Pembayaran (Hidden by default) -->
                    <div id="paymentUploadBox" class="hidden flex flex-col">
                      <label class="font-label-md text-label-md text-on-surface mb-1 flex items-center">
                        Bukti Pembayaran <span class="text-error ml-0.5">*</span>
@@ -751,6 +762,26 @@
                          <span>[Belum ada file]</span>
                        </div>
                      </div>
+                   </div>
+                 </div>
+                 -->
+
+                 <!-- SECTION 2.5 (BARU): PENDAFTARAN GRATIS -->
+                 <div class="bg-surface-container-low/40 p-4 md:p-5 rounded-lg border border-primary/10">
+                   <h3 class="font-label-lg text-label-lg text-primary uppercase tracking-wider mb-4 flex items-center gap-2 border-b border-primary/10 pb-2">
+                     <span class="material-symbols-outlined text-[18px]">verified</span>
+                     <span>Biaya Pendaftaran</span>
+                   </h3>
+
+                   <div class="p-5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-center space-y-2">
+                     <div class="flex items-center justify-center gap-2">
+                       <span class="material-symbols-outlined text-emerald-700 text-[24px]" style="font-variation-settings: &quot;FILL&quot; 1">check_circle</span>
+                       <p class="text-lg font-extrabold text-emerald-800 uppercase tracking-wide">PENDAFTARAN GRATIS</p>
+                     </div>
+                     <p class="text-sm font-semibold text-emerald-700">Tanpa biaya pendaftaran</p>
+                     <p class="text-[12px] text-emerald-600 italic">
+                       Berlaku Selama PKKMB Unusia Berlangsung.
+                     </p>
                    </div>
                  </div>
 
@@ -1027,6 +1058,8 @@
         <script>
           // Google Apps Script URL
           const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzxVQBHuFZmWJWBsiSBEgggwopW89W4QPl6TbMb3OWkpi8gFIXuIz2eJVri7V093IHw/exec";
+          
+          /* === KODE LAMA: MAX_KUOTA & PENGECEKAN KUOTA (DIKOMENTARI) ===
           const MAX_KUOTA = 10;
 
           // Fungsi Pengecekan Kuota Otomatis & Live Update
@@ -1115,6 +1148,7 @@
             checkKuotaPendaftar();
             setInterval(checkKuotaPendaftar, 5000);
           });
+          === AKHIR KODE LAMA KUOTA === */
 
           function updateFileName(input, previewId) {
             if (input.files && input.files[0]) {
@@ -1224,12 +1258,16 @@
 
             try {
               // Ambil file dari input
+              /* KODE LAMA: Membaca file pembayaran (DIKOMENTARI)
               const filePaymentInput = document.getElementById("file_payment").files[0];
+              */
               const fileIgInput = document.getElementById("file_ig").files[0];
               const fileTiktokInput = document.getElementById("file_tiktok").files[0];
 
               // Konversi file ke Base64
+              /* KODE LAMA: Konversi file pembayaran (DIKOMENTARI)
               const filePaymentData = await readFileAsBase64(filePaymentInput);
+              */
               const fileIgData = await readFileAsBase64(fileIgInput);
               const fileTiktokData = await readFileAsBase64(fileTiktokInput);
 
@@ -1243,7 +1281,7 @@
                 prodi: document.getElementById("prodi").value,
                 kampus: document.getElementById("kampus").value,
                 unit_perguruan: document.getElementById("unit_perguruan").value,
-                file_payment: filePaymentData,
+                file_payment: null,
                 file_ig: fileIgData,
                 file_tiktok: fileTiktokData,
                 timestamp: new Date().toLocaleString('id-ID')
@@ -1264,17 +1302,19 @@
               
               // Reset form
               form.reset();
+              /* KODE LAMA: Reset preview pembayaran (DIKOMENTARI - elemen sudah tidak ada di DOM)
               document.getElementById("payment_preview").innerHTML = '<span class="material-symbols-outlined text-[14px]">check_circle</span><span>[Belum ada file]</span>';
               document.getElementById("payment_preview").className = "mt-2.5 inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-high rounded text-xs text-primary font-mono font-bold";
+              */
               document.getElementById("ig_preview").innerHTML = '<span class="material-symbols-outlined text-[14px]">check_circle</span><span>[Belum ada file]</span>';
               document.getElementById("ig_preview").className = "mt-2.5 inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-high rounded text-xs text-primary font-mono font-bold";
               document.getElementById("tiktok_preview").innerHTML = '<span class="material-symbols-outlined text-[14px]">check_circle</span><span>[Belum ada file]</span>';
               document.getElementById("tiktok_preview").className = "mt-2.5 inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-high rounded text-xs text-primary font-mono font-bold";
 
-              // Check kuota terbaru setelah submit
-              setTimeout(() => {
-                checkKuotaPendaftar();
-              }, 1000);
+              // KODE LAMA: Check kuota terbaru setelah submit (DIKOMENTARI)
+              // setTimeout(() => {
+              //   checkKuotaPendaftar();
+              // }, 1000);
 
               // Kembalikan tombol ke state normal setelah delay
               setTimeout(() => {
